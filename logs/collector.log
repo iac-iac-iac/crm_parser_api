@@ -28,3 +28,1290 @@
 2026-02-09 21:06:57,980 - __main__ - ERROR - ❌ Export failed: no such table: phones
 2026-02-09 21:13:09,550 - __main__ - INFO - Starting export: runs
 2026-02-09 21:13:09,553 - __main__ - INFO - ✅ Exported runs summary: data/exports\runs_summary_20260209_211309.csv
+2026-02-09 23:11:52,343 - INFO - Retrieved 2411 clients
+2026-02-09 23:11:52,344 - INFO - Starting collection for 1 clients (run_id=2, limit_projects=None, max_pages=None)
+2026-02-09 23:11:52,344 - INFO - [1/1] Processing client d.avtosalon (id=124872)
+2026-02-09 23:11:52,465 - INFO -   Client d.avtosalon: 932 projects to process
+2026-02-09 23:11:52,970 - INFO -   Project 1/932 id=1753788 name='B1_нс carro.ru ПАРТНЕР ПРОСИЛ УБРАТЬ'
+2026-02-09 23:11:52,970 - INFO -     Fetching phones: project_id=1753788, page=1
+2026-02-09 23:11:53,662 - INFO -     Fetching phones: project_id=1753788, page=2
+2026-02-09 23:11:53,834 - INFO -     No more phones for project_id=1753788, stop pagination
+2026-02-09 23:11:53,839 - INFO -   Project 2/932 id=1753789 name='B2_нс carro.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:11:53,839 - INFO -     Fetching phones: project_id=1753789, page=1
+2026-02-09 23:11:54,548 - INFO -     Fetching phones: project_id=1753789, page=2
+2026-02-09 23:11:54,722 - INFO -     No more phones for project_id=1753789, stop pagination
+2026-02-09 23:11:54,726 - INFO -   Project 3/932 id=1753790 name='B3_нс carro.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:11:54,727 - INFO -     Fetching phones: project_id=1753790, page=1
+2026-02-09 23:11:55,439 - INFO -     Fetching phones: project_id=1753790, page=2
+2026-02-09 23:11:55,610 - INFO -     No more phones for project_id=1753790, stop pagination
+2026-02-09 23:11:55,614 - INFO -   Project 4/932 id=1753796 name='B3_нс azimut-cars.ru ПАРТНЕР ПРОСИЛ УБРАТЬ'
+2026-02-09 23:11:55,614 - INFO -     Fetching phones: project_id=1753796, page=1
+2026-02-09 23:11:56,323 - INFO -     Fetching phones: project_id=1753796, page=2
+2026-02-09 23:11:57,222 - INFO -     No more phones for project_id=1753796, stop pagination
+2026-02-09 23:11:57,226 - INFO -   Project 5/932 id=1753799 name='B3_нс atlas-dealer.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:11:57,226 - INFO -     Fetching phones: project_id=1753799, page=1
+2026-02-09 23:11:58,328 - INFO -     Fetching phones: project_id=1753799, page=2
+2026-02-09 23:11:58,504 - INFO -     No more phones for project_id=1753799, stop pagination
+2026-02-09 23:11:58,507 - INFO -   Project 6/932 id=1753832 name='B1_мпп varshavka91.ru'
+2026-02-09 23:11:58,507 - INFO -     Fetching phones: project_id=1753832, page=1
+2026-02-09 23:12:05,738 - INFO -     Fetching phones: project_id=1753832, page=2
+2026-02-09 23:12:13,234 - INFO -     Fetching phones: project_id=1753832, page=3
+2026-02-09 23:12:20,169 - INFO -     Fetching phones: project_id=1753832, page=4
+2026-02-09 23:12:20,342 - INFO -     No more phones for project_id=1753832, stop pagination
+2026-02-09 23:12:20,346 - INFO -   Project 7/932 id=1753833 name='B3_мпп varshavka91.ru'
+2026-02-09 23:12:20,346 - INFO -     Fetching phones: project_id=1753833, page=1
+2026-02-09 23:12:27,970 - INFO -     Fetching phones: project_id=1753833, page=2
+2026-02-09 23:12:35,421 - INFO -     Fetching phones: project_id=1753833, page=3
+2026-02-09 23:12:40,521 - INFO -     Fetching phones: project_id=1753833, page=4
+2026-02-09 23:12:40,706 - INFO -     No more phones for project_id=1753833, stop pagination
+2026-02-09 23:12:40,710 - INFO -   Project 8/932 id=1753844 name='B2_нс varshavka91.ru'
+2026-02-09 23:12:40,710 - INFO -     Fetching phones: project_id=1753844, page=1
+2026-02-09 23:12:41,614 - INFO -     Fetching phones: project_id=1753844, page=2
+2026-02-09 23:12:41,792 - INFO -     No more phones for project_id=1753844, stop pagination
+2026-02-09 23:12:41,796 - INFO -   Project 9/932 id=1753845 name='B3_нс varshavka91.ru'
+2026-02-09 23:12:41,796 - INFO -     Fetching phones: project_id=1753845, page=1
+2026-02-09 23:12:42,616 - INFO -     Fetching phones: project_id=1753845, page=2
+2026-02-09 23:12:42,789 - INFO -     No more phones for project_id=1753845, stop pagination
+2026-02-09 23:12:42,794 - INFO -   Project 10/932 id=1753851 name='B1_нс www.avtogermes.ru ПАРТНЕР ПРОСИЛ УБРАТЬ'
+2026-02-09 23:12:42,794 - INFO -     Fetching phones: project_id=1753851, page=1
+2026-02-09 23:12:43,781 - INFO -     Fetching phones: project_id=1753851, page=2
+2026-02-09 23:12:43,971 - INFO -     No more phones for project_id=1753851, stop pagination
+2026-02-09 23:12:43,975 - INFO -   Project 11/932 id=1753872 name='B1_нс freshauto.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:12:43,975 - INFO -     Fetching phones: project_id=1753872, page=1
+2026-02-09 23:12:44,712 - INFO -     Fetching phones: project_id=1753872, page=2
+2026-02-09 23:12:44,900 - INFO -     No more phones for project_id=1753872, stop pagination
+2026-02-09 23:12:44,916 - INFO -   Project 12/932 id=1753886 name='B1_нс www.major-expert.ru'
+2026-02-09 23:12:44,917 - INFO -     Fetching phones: project_id=1753886, page=1
+2026-02-09 23:12:45,658 - INFO -     Fetching phones: project_id=1753886, page=2
+2026-02-09 23:12:45,841 - INFO -     No more phones for project_id=1753886, stop pagination
+2026-02-09 23:12:45,844 - INFO -   Project 13/932 id=1753887 name='B2_нс www.major-expert.ru'
+2026-02-09 23:12:45,845 - INFO -     Fetching phones: project_id=1753887, page=1
+2026-02-09 23:12:46,682 - INFO -     Fetching phones: project_id=1753887, page=2
+2026-02-09 23:12:46,856 - INFO -     No more phones for project_id=1753887, stop pagination
+2026-02-09 23:12:46,859 - INFO -   Project 14/932 id=1753896 name='B3_нс 2 www.major-expert.ru'
+2026-02-09 23:12:46,860 - INFO -     Fetching phones: project_id=1753896, page=1
+2026-02-09 23:12:47,909 - INFO -     Fetching phones: project_id=1753896, page=2
+2026-02-09 23:12:48,082 - INFO -     No more phones for project_id=1753896, stop pagination
+2026-02-09 23:12:48,086 - INFO -   Project 15/932 id=1753904 name='B2_мпп www.major-expert.ru'
+2026-02-09 23:12:48,086 - INFO -     Fetching phones: project_id=1753904, page=1
+2026-02-09 23:12:49,306 - INFO -     Fetching phones: project_id=1753904, page=2
+2026-02-09 23:12:49,490 - INFO -     No more phones for project_id=1753904, stop pagination
+2026-02-09 23:12:49,494 - INFO -   Project 16/932 id=1753909 name='B1_нс kia-favorit.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:12:49,494 - INFO -     Fetching phones: project_id=1753909, page=1
+2026-02-09 23:12:50,310 - INFO -     Fetching phones: project_id=1753909, page=2
+2026-02-09 23:12:50,481 - INFO -     No more phones for project_id=1753909, stop pagination
+2026-02-09 23:12:50,484 - INFO -   Project 17/932 id=1753921 name='B1_нс кросс-авто.рф'
+2026-02-09 23:12:50,485 - INFO -     Fetching phones: project_id=1753921, page=1
+2026-02-09 23:12:51,172 - INFO -     Fetching phones: project_id=1753921, page=2
+2026-02-09 23:12:51,346 - INFO -     No more phones for project_id=1753921, stop pagination
+2026-02-09 23:12:51,350 - INFO -   Project 18/932 id=1753931 name='B2_нсо кросс-авто.рф'
+2026-02-09 23:12:51,350 - INFO -     Fetching phones: project_id=1753931, page=1
+2026-02-09 23:12:52,101 - INFO -     Fetching phones: project_id=1753931, page=2
+2026-02-09 23:12:52,272 - INFO -     No more phones for project_id=1753931, stop pagination
+2026-02-09 23:12:52,276 - INFO -   Project 19/932 id=1753932 name='B3_нсо кросс-авто.рф'
+2026-02-09 23:12:52,276 - INFO -     Fetching phones: project_id=1753932, page=1
+2026-02-09 23:12:53,006 - INFO -     Fetching phones: project_id=1753932, page=2
+2026-02-09 23:12:53,178 - INFO -     No more phones for project_id=1753932, stop pagination
+2026-02-09 23:12:53,182 - INFO -   Project 20/932 id=1753938 name='B3_нс прайм-дилер.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:12:53,182 - INFO -     Fetching phones: project_id=1753938, page=1
+2026-02-09 23:13:00,733 - INFO -     Fetching phones: project_id=1753938, page=2
+2026-02-09 23:13:02,530 - INFO -     Fetching phones: project_id=1753938, page=3
+2026-02-09 23:13:02,713 - INFO -     No more phones for project_id=1753938, stop pagination
+2026-02-09 23:13:02,717 - INFO -   Project 21/932 id=1753944 name='B1_мпп прайм-дилер.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:13:02,717 - INFO -     Fetching phones: project_id=1753944, page=1
+2026-02-09 23:13:04,333 - INFO -     Fetching phones: project_id=1753944, page=2
+2026-02-09 23:13:04,504 - INFO -     No more phones for project_id=1753944, stop pagination
+2026-02-09 23:13:04,508 - INFO -   Project 22/932 id=1753945 name='B2_мпп прайм-дилер.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:13:04,508 - INFO -     Fetching phones: project_id=1753945, page=1
+2026-02-09 23:13:05,975 - INFO -     Fetching phones: project_id=1753945, page=2
+2026-02-09 23:13:06,148 - INFO -     No more phones for project_id=1753945, stop pagination
+2026-02-09 23:13:06,153 - INFO -   Project 23/932 id=1753954 name='B1_нс 2 msk-auto-dealer.ru'
+2026-02-09 23:13:06,153 - INFO -     Fetching phones: project_id=1753954, page=1
+2026-02-09 23:13:08,403 - INFO -     Fetching phones: project_id=1753954, page=2
+2026-02-09 23:13:08,575 - INFO -     No more phones for project_id=1753954, stop pagination
+2026-02-09 23:13:08,579 - INFO -   Project 24/932 id=1753956 name='B3_нс 2 msk-auto-dealer.ru'
+2026-02-09 23:13:08,579 - INFO -     Fetching phones: project_id=1753956, page=1
+2026-02-09 23:13:10,625 - INFO -     Fetching phones: project_id=1753956, page=2
+2026-02-09 23:13:10,795 - INFO -     No more phones for project_id=1753956, stop pagination
+2026-02-09 23:13:10,799 - INFO -   Project 25/932 id=1753967 name='B1_нс rolf-probeg.ru'
+2026-02-09 23:13:10,799 - INFO -     Fetching phones: project_id=1753967, page=1
+2026-02-09 23:13:11,559 - INFO -     Fetching phones: project_id=1753967, page=2
+2026-02-09 23:13:11,734 - INFO -     No more phones for project_id=1753967, stop pagination
+2026-02-09 23:13:11,738 - INFO -   Project 26/932 id=1753977 name='B1_нс автоград-м.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:13:11,738 - INFO -     Fetching phones: project_id=1753977, page=1
+2026-02-09 23:13:12,448 - INFO -     Fetching phones: project_id=1753977, page=2
+2026-02-09 23:13:12,630 - INFO -     No more phones for project_id=1753977, stop pagination
+2026-02-09 23:13:12,633 - INFO -   Project 27/932 id=1753978 name='B3_нс автоград-м.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:13:12,633 - INFO -     Fetching phones: project_id=1753978, page=1
+2026-02-09 23:13:13,519 - INFO -     Fetching phones: project_id=1753978, page=2
+2026-02-09 23:13:13,694 - INFO -     No more phones for project_id=1753978, stop pagination
+2026-02-09 23:13:13,699 - INFO -   Project 28/932 id=1753989 name='B3_нс 2 автоград-м.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:13:13,699 - INFO -     Fetching phones: project_id=1753989, page=1
+2026-02-09 23:13:14,956 - INFO -     Fetching phones: project_id=1753989, page=2
+2026-02-09 23:13:15,132 - INFO -     No more phones for project_id=1753989, stop pagination
+2026-02-09 23:13:15,136 - INFO -   Project 29/932 id=1753998 name='B1_нс probeg-av.ru'
+2026-02-09 23:13:15,136 - INFO -     Fetching phones: project_id=1753998, page=1
+2026-02-09 23:13:15,882 - INFO -     Fetching phones: project_id=1753998, page=2
+2026-02-09 23:13:16,056 - INFO -     No more phones for project_id=1753998, stop pagination
+2026-02-09 23:13:16,060 - INFO -   Project 30/932 id=1753999 name='B3_нс probeg-av.ru'
+2026-02-09 23:13:16,060 - INFO -     Fetching phones: project_id=1753999, page=1
+2026-02-09 23:13:16,925 - INFO -     Fetching phones: project_id=1753999, page=2
+2026-02-09 23:13:17,102 - INFO -     No more phones for project_id=1753999, stop pagination
+2026-02-09 23:13:17,106 - INFO -   Project 31/932 id=1754025 name='B1_нс 2 probeg-av.ru'
+2026-02-09 23:13:17,106 - INFO -     Fetching phones: project_id=1754025, page=1
+2026-02-09 23:13:17,796 - INFO -     Fetching phones: project_id=1754025, page=2
+2026-02-09 23:13:17,976 - INFO -     No more phones for project_id=1754025, stop pagination
+2026-02-09 23:13:17,981 - INFO -   Project 32/932 id=1754030 name='B2_нс avantaauto.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:13:17,981 - INFO -     Fetching phones: project_id=1754030, page=1
+2026-02-09 23:13:18,802 - INFO -     Fetching phones: project_id=1754030, page=2
+2026-02-09 23:13:18,978 - INFO -     No more phones for project_id=1754030, stop pagination
+2026-02-09 23:13:18,982 - INFO -   Project 33/932 id=1754031 name='B3_нс avantaauto.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:13:18,982 - INFO -     Fetching phones: project_id=1754031, page=1
+2026-02-09 23:13:19,911 - INFO -     Fetching phones: project_id=1754031, page=2
+2026-02-09 23:13:20,083 - INFO -     No more phones for project_id=1754031, stop pagination
+2026-02-09 23:13:20,088 - INFO -   Project 34/932 id=1754122 name='B1_нс avanta-avto-credit.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:13:20,088 - INFO -     Fetching phones: project_id=1754122, page=1
+2026-02-09 23:13:20,805 - INFO -     Fetching phones: project_id=1754122, page=2
+2026-02-09 23:13:20,980 - INFO -     No more phones for project_id=1754122, stop pagination
+2026-02-09 23:13:20,984 - INFO -   Project 35/932 id=1754124 name='B3_нс avanta-avto-credit.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:13:20,984 - INFO -     Fetching phones: project_id=1754124, page=1
+2026-02-09 23:13:21,919 - INFO -     Fetching phones: project_id=1754124, page=2
+2026-02-09 23:13:22,096 - INFO -     No more phones for project_id=1754124, stop pagination
+2026-02-09 23:13:22,099 - INFO -   Project 36/932 id=1754131 name='B1_нсо avanta-avto-credit.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:13:22,103 - INFO -     Fetching phones: project_id=1754131, page=1
+2026-02-09 23:13:23,097 - INFO -     Fetching phones: project_id=1754131, page=2
+2026-02-09 23:13:23,275 - INFO -     No more phones for project_id=1754131, stop pagination
+2026-02-09 23:13:23,279 - INFO -   Project 37/932 id=1754132 name='B3_нсо avanta-avto-credit.ru'
+2026-02-09 23:13:23,279 - INFO -     Fetching phones: project_id=1754132, page=1
+2026-02-09 23:13:24,304 - INFO -     Fetching phones: project_id=1754132, page=2
+2026-02-09 23:13:24,484 - INFO -     No more phones for project_id=1754132, stop pagination
+2026-02-09 23:13:24,488 - INFO -   Project 38/932 id=1754134 name='B2_мпп avanta-avto-credit.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:13:24,488 - INFO -     Fetching phones: project_id=1754134, page=1
+2026-02-09 23:13:25,491 - INFO -     Fetching phones: project_id=1754134, page=2
+2026-02-09 23:13:25,662 - INFO -     No more phones for project_id=1754134, stop pagination
+2026-02-09 23:13:25,666 - INFO -   Project 39/932 id=1754135 name='B3_мпп avanta-avto-credit.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:13:25,666 - INFO -     Fetching phones: project_id=1754135, page=1
+2026-02-09 23:13:26,563 - INFO -     Fetching phones: project_id=1754135, page=2
+2026-02-09 23:13:26,735 - INFO -     No more phones for project_id=1754135, stop pagination
+2026-02-09 23:13:26,739 - INFO -   Project 40/932 id=1754147 name='B3_нс genzes.ru'
+2026-02-09 23:13:26,739 - INFO -     Fetching phones: project_id=1754147, page=1
+2026-02-09 23:13:27,532 - INFO -     Fetching phones: project_id=1754147, page=2
+2026-02-09 23:13:27,706 - INFO -     No more phones for project_id=1754147, stop pagination
+2026-02-09 23:13:27,709 - INFO -   Project 41/932 id=1754156 name='B1_нс carwinmotors.ru'
+2026-02-09 23:13:27,710 - INFO -     Fetching phones: project_id=1754156, page=1
+2026-02-09 23:13:28,529 - INFO -     Fetching phones: project_id=1754156, page=2
+2026-02-09 23:13:28,703 - INFO -     No more phones for project_id=1754156, stop pagination
+2026-02-09 23:13:28,707 - INFO -   Project 42/932 id=1754157 name='B2_нс carwinmotors.ru'
+2026-02-09 23:13:28,707 - INFO -     Fetching phones: project_id=1754157, page=1
+2026-02-09 23:13:29,901 - INFO -     Fetching phones: project_id=1754157, page=2
+2026-02-09 23:13:30,075 - INFO -     No more phones for project_id=1754157, stop pagination
+2026-02-09 23:13:30,078 - INFO -   Project 43/932 id=1754158 name='B3_нс carwinmotors.ru'
+2026-02-09 23:13:30,078 - INFO -     Fetching phones: project_id=1754158, page=1
+2026-02-09 23:13:31,421 - INFO -     Fetching phones: project_id=1754158, page=2
+2026-02-09 23:13:31,602 - INFO -     No more phones for project_id=1754158, stop pagination
+2026-02-09 23:13:31,606 - INFO -   Project 44/932 id=1754166 name='B3_нс masmotors.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:13:31,606 - INFO -     Fetching phones: project_id=1754166, page=1
+2026-02-09 23:13:33,024 - INFO -     Fetching phones: project_id=1754166, page=2
+2026-02-09 23:13:33,197 - INFO -     No more phones for project_id=1754166, stop pagination
+2026-02-09 23:13:33,202 - INFO -   Project 45/932 id=1754170 name='B3_нс nzvsmst.ru'
+2026-02-09 23:13:33,205 - INFO -     Fetching phones: project_id=1754170, page=1
+2026-02-09 23:13:34,054 - INFO -     Fetching phones: project_id=1754170, page=2
+2026-02-09 23:13:34,248 - INFO -     No more phones for project_id=1754170, stop pagination
+2026-02-09 23:13:34,252 - INFO -   Project 46/932 id=1754201 name='B2_нс 2 avantaauto.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:13:34,252 - INFO -     Fetching phones: project_id=1754201, page=1
+2026-02-09 23:13:34,952 - INFO -     Fetching phones: project_id=1754201, page=2
+2026-02-09 23:13:35,123 - INFO -     No more phones for project_id=1754201, stop pagination
+2026-02-09 23:13:35,126 - INFO -   Project 47/932 id=1754202 name='B3_нс 2 avantaauto.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:13:35,126 - INFO -     Fetching phones: project_id=1754202, page=1
+2026-02-09 23:13:35,849 - INFO -     Fetching phones: project_id=1754202, page=2
+2026-02-09 23:13:36,020 - INFO -     No more phones for project_id=1754202, stop pagination
+2026-02-09 23:13:36,025 - INFO -   Project 48/932 id=1754256 name='B3_нс  avanta-avto.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:13:36,025 - INFO -     Fetching phones: project_id=1754256, page=1
+2026-02-09 23:13:37,761 - INFO -     Fetching phones: project_id=1754256, page=2
+2026-02-09 23:13:37,933 - INFO -     No more phones for project_id=1754256, stop pagination
+2026-02-09 23:13:37,936 - INFO -   Project 49/932 id=1754261 name='B2_нс vogue-motors.com'
+2026-02-09 23:13:37,936 - INFO -     Fetching phones: project_id=1754261, page=1
+2026-02-09 23:13:38,650 - INFO -     Fetching phones: project_id=1754261, page=2
+2026-02-09 23:13:38,831 - INFO -     No more phones for project_id=1754261, stop pagination
+2026-02-09 23:13:38,836 - INFO -   Project 50/932 id=1754262 name='B3_нс vogue-motors.com'
+2026-02-09 23:13:38,836 - INFO -     Fetching phones: project_id=1754262, page=1
+2026-02-09 23:13:39,572 - INFO -     Fetching phones: project_id=1754262, page=2
+2026-02-09 23:13:39,742 - INFO -     No more phones for project_id=1754262, stop pagination
+2026-02-09 23:13:39,746 - INFO -   Project 51/932 id=1754264 name='B2_мпп vogue-motors.com'
+2026-02-09 23:13:39,746 - INFO -     Fetching phones: project_id=1754264, page=1
+2026-02-09 23:13:41,504 - INFO -     Fetching phones: project_id=1754264, page=2
+2026-02-09 23:13:41,685 - INFO -     No more phones for project_id=1754264, stop pagination
+2026-02-09 23:13:41,688 - INFO -   Project 52/932 id=1754270 name='B3_нс carmir-dealer.ru'
+2026-02-09 23:13:41,688 - INFO -     Fetching phones: project_id=1754270, page=1
+2026-02-09 23:13:44,363 - INFO -     Fetching phones: project_id=1754270, page=2
+2026-02-09 23:13:44,543 - INFO -     No more phones for project_id=1754270, stop pagination
+2026-02-09 23:13:44,547 - INFO -   Project 53/932 id=1754273 name='B1_нс used.nezavisimost.su ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:13:44,551 - INFO -     Fetching phones: project_id=1754273, page=1
+2026-02-09 23:13:45,147 - INFO - Stop requested by user
+2026-02-09 23:13:47,759 - INFO -     Fetching phones: project_id=1754273, page=2
+2026-02-09 23:13:47,932 - INFO -     No more phones for project_id=1754273, stop pagination
+2026-02-09 23:13:47,936 - INFO -   Project 54/932 id=1754274 name='B3_нс used.nezavisimost.su ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:13:47,936 - INFO -     Fetching phones: project_id=1754274, page=1
+2026-02-09 23:13:50,036 - INFO -     Fetching phones: project_id=1754274, page=2
+2026-02-09 23:13:50,215 - INFO -     No more phones for project_id=1754274, stop pagination
+2026-02-09 23:13:50,219 - INFO -   Project 55/932 id=1754277 name='B1_нс auto-bereg.ru ПАРТНЕР ПРОСИЛ УБРАТЬ'
+2026-02-09 23:13:50,219 - INFO -     Fetching phones: project_id=1754277, page=1
+2026-02-09 23:13:52,524 - INFO -     Fetching phones: project_id=1754277, page=2
+2026-02-09 23:13:52,695 - INFO -     No more phones for project_id=1754277, stop pagination
+2026-02-09 23:13:52,698 - INFO -   Project 56/932 id=1754279 name='B3_нс auto-bereg.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:13:52,698 - INFO -     Fetching phones: project_id=1754279, page=1
+2026-02-09 23:13:53,984 - INFO -     Fetching phones: project_id=1754279, page=2
+2026-02-09 23:13:54,163 - INFO -     No more phones for project_id=1754279, stop pagination
+2026-02-09 23:13:54,167 - INFO -   Project 57/932 id=1754282 name='B1_нс bu-car.ru'
+2026-02-09 23:13:54,167 - INFO -     Fetching phones: project_id=1754282, page=1
+2026-02-09 23:13:55,210 - INFO -     Fetching phones: project_id=1754282, page=2
+2026-02-09 23:13:55,388 - INFO -     No more phones for project_id=1754282, stop pagination
+2026-02-09 23:13:55,392 - INFO -   Project 58/932 id=1754293 name='B1_нс autosalon-vektor.ru'
+2026-02-09 23:13:55,392 - INFO -     Fetching phones: project_id=1754293, page=1
+2026-02-09 23:13:56,096 - INFO -     Fetching phones: project_id=1754293, page=2
+2026-02-09 23:13:56,266 - INFO -     No more phones for project_id=1754293, stop pagination
+2026-02-09 23:13:56,271 - INFO -   Project 59/932 id=1754294 name='B2_нс autosalon-vektor.ru'
+2026-02-09 23:13:56,271 - INFO -     Fetching phones: project_id=1754294, page=1
+2026-02-09 23:13:57,017 - INFO -     Fetching phones: project_id=1754294, page=2
+2026-02-09 23:13:57,200 - INFO -     No more phones for project_id=1754294, stop pagination
+2026-02-09 23:13:57,204 - INFO -   Project 60/932 id=1754295 name='B3_нс autosalon-vektor.ru'
+2026-02-09 23:13:57,204 - INFO -     Fetching phones: project_id=1754295, page=1
+2026-02-09 23:13:57,939 - INFO -     Fetching phones: project_id=1754295, page=2
+2026-02-09 23:13:58,114 - INFO -     No more phones for project_id=1754295, stop pagination
+2026-02-09 23:13:58,118 - INFO -   Project 61/932 id=1754299 name='B1_нс autoprimemsc.ru'
+2026-02-09 23:13:58,119 - INFO -     Fetching phones: project_id=1754299, page=1
+2026-02-09 23:13:58,895 - INFO -     Fetching phones: project_id=1754299, page=2
+2026-02-09 23:13:59,071 - INFO -     No more phones for project_id=1754299, stop pagination
+2026-02-09 23:13:59,075 - INFO -   Project 62/932 id=1754300 name='B2_нс autoprimemsc.ru'
+2026-02-09 23:13:59,075 - INFO -     Fetching phones: project_id=1754300, page=1
+2026-02-09 23:14:00,618 - INFO -     Fetching phones: project_id=1754300, page=2
+2026-02-09 23:14:00,790 - INFO -     No more phones for project_id=1754300, stop pagination
+2026-02-09 23:14:00,794 - INFO -   Project 63/932 id=1754301 name='B3_нс autoprimemsc.ru'
+2026-02-09 23:14:00,794 - INFO -     Fetching phones: project_id=1754301, page=1
+2026-02-09 23:14:01,925 - INFO -     Fetching phones: project_id=1754301, page=2
+2026-02-09 23:14:02,094 - INFO -     No more phones for project_id=1754301, stop pagination
+2026-02-09 23:14:02,099 - INFO -   Project 64/932 id=1754315 name='B1_нс moscow-autosalon.ru'
+2026-02-09 23:14:02,099 - INFO -     Fetching phones: project_id=1754315, page=1
+2026-02-09 23:14:07,251 - INFO -     Fetching phones: project_id=1754315, page=2
+2026-02-09 23:14:07,423 - INFO -     No more phones for project_id=1754315, stop pagination
+2026-02-09 23:14:07,426 - INFO -   Project 65/932 id=1754316 name='B3_нс moscow-autosalon.ru'
+2026-02-09 23:14:07,426 - INFO -     Fetching phones: project_id=1754316, page=1
+2026-02-09 23:14:09,798 - INFO -     Fetching phones: project_id=1754316, page=2
+2026-02-09 23:14:09,970 - INFO -     No more phones for project_id=1754316, stop pagination
+2026-02-09 23:14:09,974 - INFO -   Project 66/932 id=1754320 name='B1_мпп carpro.su ПАРТНЕР ПРОСИЛ УБРАТЬ'
+2026-02-09 23:14:09,974 - INFO -     Fetching phones: project_id=1754320, page=1
+2026-02-09 23:14:10,697 - INFO -     Fetching phones: project_id=1754320, page=2
+2026-02-09 23:14:10,866 - INFO -     No more phones for project_id=1754320, stop pagination
+2026-02-09 23:14:10,871 - INFO -   Project 67/932 id=1754321 name='B2_мпп carpro.su ПАРТНЕР ПРОСИЛ УБРАТЬ'
+2026-02-09 23:14:10,871 - INFO -     Fetching phones: project_id=1754321, page=1
+2026-02-09 23:14:11,745 - INFO -     Fetching phones: project_id=1754321, page=2
+2026-02-09 23:14:11,929 - INFO -     No more phones for project_id=1754321, stop pagination
+2026-02-09 23:14:11,933 - INFO -   Project 68/932 id=1754322 name='B3_мпп carpro.su ПАРТНЕР ПРОСИЛ УБРАТЬ'
+2026-02-09 23:14:11,933 - INFO -     Fetching phones: project_id=1754322, page=1
+2026-02-09 23:14:12,836 - INFO -     Fetching phones: project_id=1754322, page=2
+2026-02-09 23:14:13,010 - INFO -     No more phones for project_id=1754322, stop pagination
+2026-02-09 23:14:13,014 - INFO -   Project 69/932 id=1754323 name='B1_мпп 2 прайм-дилер.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:14:13,014 - INFO -     Fetching phones: project_id=1754323, page=1
+2026-02-09 23:14:14,927 - INFO -     Fetching phones: project_id=1754323, page=2
+2026-02-09 23:14:15,101 - INFO -     No more phones for project_id=1754323, stop pagination
+2026-02-09 23:14:15,105 - INFO -   Project 70/932 id=1754324 name='B2_мпп 2 прайм-дилер.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:14:15,105 - INFO -     Fetching phones: project_id=1754324, page=1
+2026-02-09 23:14:19,069 - INFO -     Fetching phones: project_id=1754324, page=2
+2026-02-09 23:14:19,239 - INFO -     No more phones for project_id=1754324, stop pagination
+2026-02-09 23:14:19,244 - INFO -   Project 71/932 id=1754325 name='B3_мпп 2 прайм-дилер.рф'
+2026-02-09 23:14:19,244 - INFO -     Fetching phones: project_id=1754325, page=1
+2026-02-09 23:14:20,417 - INFO -     Fetching phones: project_id=1754325, page=2
+2026-02-09 23:14:20,594 - INFO -     No more phones for project_id=1754325, stop pagination
+2026-02-09 23:14:20,598 - INFO -   Project 72/932 id=1754332 name='B2_нс azbuka-cars.ru'
+2026-02-09 23:14:20,599 - INFO -     Fetching phones: project_id=1754332, page=1
+2026-02-09 23:14:21,297 - INFO -     Fetching phones: project_id=1754332, page=2
+2026-02-09 23:14:21,486 - INFO -     No more phones for project_id=1754332, stop pagination
+2026-02-09 23:14:21,490 - INFO -   Project 73/932 id=1754333 name='B3_нс azbuka-cars.ru'
+2026-02-09 23:14:21,490 - INFO -     Fetching phones: project_id=1754333, page=1
+2026-02-09 23:14:22,178 - INFO -     Fetching phones: project_id=1754333, page=2
+2026-02-09 23:14:22,352 - INFO -     No more phones for project_id=1754333, stop pagination
+2026-02-09 23:14:22,356 - INFO -   Project 74/932 id=1754336 name='B1_нс 2 azbuka-cars.ru'
+2026-02-09 23:14:22,356 - INFO -     Fetching phones: project_id=1754336, page=1
+2026-02-09 23:14:23,046 - INFO -     Fetching phones: project_id=1754336, page=2
+2026-02-09 23:14:23,223 - INFO -     No more phones for project_id=1754336, stop pagination
+2026-02-09 23:14:23,228 - INFO -   Project 75/932 id=1754337 name='B2_нс 2 azbuka-cars.ru'
+2026-02-09 23:14:23,228 - INFO -     Fetching phones: project_id=1754337, page=1
+2026-02-09 23:14:23,950 - INFO -     Fetching phones: project_id=1754337, page=2
+2026-02-09 23:14:24,124 - INFO -     No more phones for project_id=1754337, stop pagination
+2026-02-09 23:14:24,127 - INFO -   Project 76/932 id=1754338 name='B3_нс 2 azbuka-cars.ru'
+2026-02-09 23:14:24,128 - INFO -     Fetching phones: project_id=1754338, page=1
+2026-02-09 23:14:24,897 - INFO -     Fetching phones: project_id=1754338, page=2
+2026-02-09 23:14:25,071 - INFO -     No more phones for project_id=1754338, stop pagination
+2026-02-09 23:14:25,074 - INFO -   Project 77/932 id=1754339 name='B1_мпп azbuka-cars.ru'
+2026-02-09 23:14:25,074 - INFO -     Fetching phones: project_id=1754339, page=1
+2026-02-09 23:14:25,822 - INFO -     Fetching phones: project_id=1754339, page=2
+2026-02-09 23:14:26,005 - INFO -     No more phones for project_id=1754339, stop pagination
+2026-02-09 23:14:26,009 - INFO -   Project 78/932 id=1754340 name='B2_мпп azbuka-cars.ru'
+2026-02-09 23:14:26,009 - INFO -     Fetching phones: project_id=1754340, page=1
+2026-02-09 23:14:26,714 - INFO -     Fetching phones: project_id=1754340, page=2
+2026-02-09 23:14:26,901 - INFO -     No more phones for project_id=1754340, stop pagination
+2026-02-09 23:14:26,904 - INFO -   Project 79/932 id=1754341 name='B3_мпп azbuka-cars.ru'
+2026-02-09 23:14:26,904 - INFO -     Fetching phones: project_id=1754341, page=1
+2026-02-09 23:14:27,642 - INFO -     Fetching phones: project_id=1754341, page=2
+2026-02-09 23:14:27,816 - INFO -     No more phones for project_id=1754341, stop pagination
+2026-02-09 23:14:27,821 - INFO -   Project 80/932 id=1754346 name='B2_нс sale.omoda-avtoport.ru'
+2026-02-09 23:14:27,821 - INFO -     Fetching phones: project_id=1754346, page=1
+2026-02-09 23:14:28,509 - INFO -     Fetching phones: project_id=1754346, page=2
+2026-02-09 23:14:28,682 - INFO -     No more phones for project_id=1754346, stop pagination
+2026-02-09 23:14:28,685 - INFO -   Project 81/932 id=1754353 name='B2_мпп sale.omoda-avtoport.ru'
+2026-02-09 23:14:28,686 - INFO -     Fetching phones: project_id=1754353, page=1
+2026-02-09 23:14:29,379 - INFO -     Fetching phones: project_id=1754353, page=2
+2026-02-09 23:14:29,558 - INFO -     No more phones for project_id=1754353, stop pagination
+2026-02-09 23:14:29,562 - INFO -   Project 82/932 id=1754354 name='B3_мпп sale.omoda-avtoport.ru'
+2026-02-09 23:14:29,562 - INFO -     Fetching phones: project_id=1754354, page=1
+2026-02-09 23:14:30,273 - INFO -     Fetching phones: project_id=1754354, page=2
+2026-02-09 23:14:30,455 - INFO -     No more phones for project_id=1754354, stop pagination
+2026-02-09 23:14:30,460 - INFO -   Project 83/932 id=1754356 name='B2_нс armada-cars.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:14:30,460 - INFO -     Fetching phones: project_id=1754356, page=1
+2026-02-09 23:14:31,168 - INFO -     Fetching phones: project_id=1754356, page=2
+2026-02-09 23:14:31,344 - INFO -     No more phones for project_id=1754356, stop pagination
+2026-02-09 23:14:31,349 - INFO -   Project 84/932 id=1754357 name='B3_нс armada-cars.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:14:31,349 - INFO -     Fetching phones: project_id=1754357, page=1
+2026-02-09 23:14:32,056 - INFO -     Fetching phones: project_id=1754357, page=2
+2026-02-09 23:14:32,229 - INFO -     No more phones for project_id=1754357, stop pagination
+2026-02-09 23:14:32,233 - INFO -   Project 85/932 id=1754365 name='B1_нс avtomir.ru'
+2026-02-09 23:14:32,233 - INFO -     Fetching phones: project_id=1754365, page=1
+2026-02-09 23:14:32,983 - INFO -     Fetching phones: project_id=1754365, page=2
+2026-02-09 23:14:33,156 - INFO -     No more phones for project_id=1754365, stop pagination
+2026-02-09 23:14:33,161 - INFO -   Project 86/932 id=1754403 name='B1_нс автосалон-химки.москва'
+2026-02-09 23:14:33,161 - INFO -     Fetching phones: project_id=1754403, page=1
+2026-02-09 23:14:37,581 - INFO -     Fetching phones: project_id=1754403, page=2
+2026-02-09 23:14:37,756 - INFO -     No more phones for project_id=1754403, stop pagination
+2026-02-09 23:14:37,759 - INFO -   Project 87/932 id=1754404 name='B2_нс автосалон-химки.москва'
+2026-02-09 23:14:37,760 - INFO -     Fetching phones: project_id=1754404, page=1
+2026-02-09 23:14:39,495 - INFO -     Fetching phones: project_id=1754404, page=2
+2026-02-09 23:14:39,690 - INFO -     No more phones for project_id=1754404, stop pagination
+2026-02-09 23:14:39,693 - INFO -   Project 88/932 id=1754405 name='B3_нс автосалон-химки.москва'
+2026-02-09 23:14:39,694 - INFO -     Fetching phones: project_id=1754405, page=1
+2026-02-09 23:14:42,670 - INFO -     Fetching phones: project_id=1754405, page=2
+2026-02-09 23:14:42,849 - INFO -     No more phones for project_id=1754405, stop pagination
+2026-02-09 23:14:42,853 - INFO -   Project 89/932 id=1754418 name='B1_нс ac-tulskaya.ru'
+2026-02-09 23:14:42,853 - INFO -     Fetching phones: project_id=1754418, page=1
+2026-02-09 23:14:49,536 - INFO -     Fetching phones: project_id=1754418, page=2
+2026-02-09 23:14:49,717 - INFO -     No more phones for project_id=1754418, stop pagination
+2026-02-09 23:14:49,720 - INFO -   Project 90/932 id=1754419 name='B2_нс ac-tulskaya.ru'
+2026-02-09 23:14:49,720 - INFO -     Fetching phones: project_id=1754419, page=1
+2026-02-09 23:14:54,217 - INFO -     Fetching phones: project_id=1754419, page=2
+2026-02-09 23:14:54,391 - INFO -     No more phones for project_id=1754419, stop pagination
+2026-02-09 23:14:54,396 - INFO -   Project 91/932 id=1754420 name='B3_нс ac-tulskaya.ru'
+2026-02-09 23:14:54,396 - INFO -     Fetching phones: project_id=1754420, page=1
+2026-02-09 23:14:57,595 - INFO -     Fetching phones: project_id=1754420, page=2
+2026-02-09 23:14:57,771 - INFO -     No more phones for project_id=1754420, stop pagination
+2026-02-09 23:14:57,774 - INFO -   Project 92/932 id=1754427 name='B1_нс ац-береговой.рф'
+2026-02-09 23:14:57,776 - INFO -     Fetching phones: project_id=1754427, page=1
+2026-02-09 23:14:59,519 - INFO -     Fetching phones: project_id=1754427, page=2
+2026-02-09 23:14:59,705 - INFO -     No more phones for project_id=1754427, stop pagination
+2026-02-09 23:14:59,710 - INFO -   Project 93/932 id=1754428 name='B2_нс ац-береговой.рф'
+2026-02-09 23:14:59,711 - INFO -     Fetching phones: project_id=1754428, page=1
+2026-02-09 23:15:02,910 - INFO -     Fetching phones: project_id=1754428, page=2
+2026-02-09 23:15:03,085 - INFO -     No more phones for project_id=1754428, stop pagination
+2026-02-09 23:15:03,090 - INFO -   Project 94/932 id=1754429 name='B3_нс ац-береговой.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:15:03,090 - INFO -     Fetching phones: project_id=1754429, page=1
+2026-02-09 23:15:07,211 - INFO -     Fetching phones: project_id=1754429, page=2
+2026-02-09 23:15:07,391 - INFO -     No more phones for project_id=1754429, stop pagination
+2026-02-09 23:15:07,396 - INFO -   Project 95/932 id=1754440 name='B3_нс autoexpert.moscow ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:15:07,396 - INFO -     Fetching phones: project_id=1754440, page=1
+2026-02-09 23:15:10,536 - INFO -     Fetching phones: project_id=1754440, page=2
+2026-02-09 23:15:10,707 - INFO -     No more phones for project_id=1754440, stop pagination
+2026-02-09 23:15:10,712 - INFO -   Project 96/932 id=1754454 name='B2_мпп avtomir.ru'
+2026-02-09 23:15:10,712 - INFO -     Fetching phones: project_id=1754454, page=1
+2026-02-09 23:15:12,250 - INFO -     Fetching phones: project_id=1754454, page=2
+2026-02-09 23:15:12,431 - INFO -     No more phones for project_id=1754454, stop pagination
+2026-02-09 23:15:12,435 - INFO -   Project 97/932 id=1754463 name='B1_мпп armada-cars.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:15:12,436 - INFO -     Fetching phones: project_id=1754463, page=1
+2026-02-09 23:15:13,126 - INFO -     Fetching phones: project_id=1754463, page=2
+2026-02-09 23:15:13,303 - INFO -     No more phones for project_id=1754463, stop pagination
+2026-02-09 23:15:13,307 - INFO -   Project 98/932 id=1754464 name='B2_мпп armada-cars.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:15:13,307 - INFO -     Fetching phones: project_id=1754464, page=1
+2026-02-09 23:15:14,040 - INFO -     Fetching phones: project_id=1754464, page=2
+2026-02-09 23:15:14,220 - INFO -     No more phones for project_id=1754464, stop pagination
+2026-02-09 23:15:14,224 - INFO -   Project 99/932 id=1754465 name='B3_мпп armada-cars.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:15:14,224 - INFO -     Fetching phones: project_id=1754465, page=1
+2026-02-09 23:15:15,062 - INFO -     Fetching phones: project_id=1754465, page=2
+2026-02-09 23:15:15,237 - INFO -     No more phones for project_id=1754465, stop pagination
+2026-02-09 23:15:15,242 - INFO -   Project 100/932 id=1754466 name='B1_мпп 2 vogue-motors.com'
+2026-02-09 23:15:15,242 - INFO -     Fetching phones: project_id=1754466, page=1
+2026-02-09 23:15:15,992 - INFO -     Fetching phones: project_id=1754466, page=2
+2026-02-09 23:15:16,169 - INFO -     No more phones for project_id=1754466, stop pagination
+2026-02-09 23:15:16,173 - INFO -   Project 101/932 id=1754467 name='B2_мпп 2 vogue-motors.com'
+2026-02-09 23:15:16,173 - INFO -     Fetching phones: project_id=1754467, page=1
+2026-02-09 23:15:16,880 - INFO -     Fetching phones: project_id=1754467, page=2
+2026-02-09 23:15:17,050 - INFO -     No more phones for project_id=1754467, stop pagination
+2026-02-09 23:15:17,054 - INFO -   Project 102/932 id=1754468 name='B3_мпп 2 vogue-motors.com'
+2026-02-09 23:15:17,054 - INFO -     Fetching phones: project_id=1754468, page=1
+2026-02-09 23:15:17,813 - INFO -     Fetching phones: project_id=1754468, page=2
+2026-02-09 23:15:17,999 - INFO -     No more phones for project_id=1754468, stop pagination
+2026-02-09 23:15:18,003 - INFO -   Project 103/932 id=1754469 name='B1_мпп mb-i.ru'
+2026-02-09 23:15:18,003 - INFO -     Fetching phones: project_id=1754469, page=1
+2026-02-09 23:15:18,769 - INFO -     Fetching phones: project_id=1754469, page=2
+2026-02-09 23:15:18,944 - INFO -     No more phones for project_id=1754469, stop pagination
+2026-02-09 23:15:18,948 - INFO -   Project 104/932 id=1754470 name='B2_мпп mb-i.ru'
+2026-02-09 23:15:18,948 - INFO -     Fetching phones: project_id=1754470, page=1
+2026-02-09 23:15:19,695 - INFO -     Fetching phones: project_id=1754470, page=2
+2026-02-09 23:15:19,869 - INFO -     No more phones for project_id=1754470, stop pagination
+2026-02-09 23:15:19,873 - INFO -   Project 105/932 id=1754471 name='B3_мпп mb-i.ru'
+2026-02-09 23:15:19,873 - INFO -     Fetching phones: project_id=1754471, page=1
+2026-02-09 23:15:20,679 - INFO -     Fetching phones: project_id=1754471, page=2
+2026-02-09 23:15:20,856 - INFO -     No more phones for project_id=1754471, stop pagination
+2026-02-09 23:15:20,861 - INFO -   Project 106/932 id=1754479 name='B3_мпп avanta-avto.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:15:20,861 - INFO -     Fetching phones: project_id=1754479, page=1
+2026-02-09 23:15:26,201 - INFO -     Fetching phones: project_id=1754479, page=2
+2026-02-09 23:15:26,385 - INFO -     No more phones for project_id=1754479, stop pagination
+2026-02-09 23:15:26,389 - INFO -   Project 107/932 id=1754485 name='B3_мпп автоград-м.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:15:26,389 - INFO -     Fetching phones: project_id=1754485, page=1
+2026-02-09 23:15:29,087 - INFO -     Fetching phones: project_id=1754485, page=2
+2026-02-09 23:15:29,271 - INFO -     No more phones for project_id=1754485, stop pagination
+2026-02-09 23:15:29,276 - INFO -   Project 108/932 id=1754487 name='B2_нс promo.kuntsevo-exeed.ru'
+2026-02-09 23:15:29,276 - INFO -     Fetching phones: project_id=1754487, page=1
+2026-02-09 23:15:30,030 - INFO -     Fetching phones: project_id=1754487, page=2
+2026-02-09 23:15:30,203 - INFO -     No more phones for project_id=1754487, stop pagination
+2026-02-09 23:15:30,206 - INFO -   Project 109/932 id=1754488 name='B3_нс promo.kuntsevo-exeed.ru'
+2026-02-09 23:15:30,207 - INFO -     Fetching phones: project_id=1754488, page=1
+2026-02-09 23:15:30,988 - INFO -     Fetching phones: project_id=1754488, page=2
+2026-02-09 23:15:31,165 - INFO -     No more phones for project_id=1754488, stop pagination
+2026-02-09 23:15:31,169 - INFO -   Project 110/932 id=1754499 name='B1_нс favorit'
+2026-02-09 23:15:31,169 - INFO -     Fetching phones: project_id=1754499, page=1
+2026-02-09 23:15:31,969 - INFO -     Fetching phones: project_id=1754499, page=2
+2026-02-09 23:15:32,153 - INFO -     No more phones for project_id=1754499, stop pagination
+2026-02-09 23:15:32,157 - INFO -   Project 111/932 id=1754501 name='B3_нс favorit'
+2026-02-09 23:15:32,157 - INFO -     Fetching phones: project_id=1754501, page=1
+2026-02-09 23:15:33,270 - INFO -     Fetching phones: project_id=1754501, page=2
+2026-02-09 23:15:33,441 - INFO -     No more phones for project_id=1754501, stop pagination
+2026-02-09 23:15:33,446 - INFO -   Project 112/932 id=1754505 name='B3_нс auto-zhir.ru'
+2026-02-09 23:15:33,446 - INFO -     Fetching phones: project_id=1754505, page=1
+2026-02-09 23:15:34,146 - INFO -     Fetching phones: project_id=1754505, page=2
+2026-02-09 23:15:34,326 - INFO -     No more phones for project_id=1754505, stop pagination
+2026-02-09 23:15:34,331 - INFO -   Project 113/932 id=1754507 name='B2_нс proffit-avto.ru'
+2026-02-09 23:15:34,333 - INFO -     Fetching phones: project_id=1754507, page=1
+2026-02-09 23:15:35,046 - INFO -     Fetching phones: project_id=1754507, page=2
+2026-02-09 23:15:35,220 - INFO -     No more phones for project_id=1754507, stop pagination
+2026-02-09 23:15:35,224 - INFO -   Project 114/932 id=1754515 name='B3_мпп proffit-avto.ru'
+2026-02-09 23:15:35,224 - INFO -     Fetching phones: project_id=1754515, page=1
+2026-02-09 23:15:37,000 - INFO -     Fetching phones: project_id=1754515, page=2
+2026-02-09 23:15:37,176 - INFO -     No more phones for project_id=1754515, stop pagination
+2026-02-09 23:15:37,180 - INFO -   Project 115/932 id=1754518 name='B3_мпп авилон'
+2026-02-09 23:15:37,184 - INFO -     Fetching phones: project_id=1754518, page=1
+2026-02-09 23:15:37,943 - INFO -     Fetching phones: project_id=1754518, page=2
+2026-02-09 23:15:38,123 - INFO -     No more phones for project_id=1754518, stop pagination
+2026-02-09 23:15:38,127 - INFO -   Project 116/932 id=1754522 name='B2_нс автоград-м.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:15:38,127 - INFO -     Fetching phones: project_id=1754522, page=1
+2026-02-09 23:15:38,989 - INFO -     Fetching phones: project_id=1754522, page=2
+2026-02-09 23:15:39,165 - INFO -     No more phones for project_id=1754522, stop pagination
+2026-02-09 23:15:39,172 - INFO -   Project 117/932 id=1754523 name='B2_нс 2 автоград-м.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:15:39,172 - INFO -     Fetching phones: project_id=1754523, page=1
+2026-02-09 23:15:40,325 - INFO -     Fetching phones: project_id=1754523, page=2
+2026-02-09 23:15:40,501 - INFO -     No more phones for project_id=1754523, stop pagination
+2026-02-09 23:15:40,505 - INFO -   Project 118/932 id=1754524 name='B2_нс probeg-av.ru'
+2026-02-09 23:15:40,505 - INFO -     Fetching phones: project_id=1754524, page=1
+2026-02-09 23:15:41,863 - INFO -     Fetching phones: project_id=1754524, page=2
+2026-02-09 23:15:42,036 - INFO -     No more phones for project_id=1754524, stop pagination
+2026-02-09 23:15:42,040 - INFO -   Project 119/932 id=1754535 name='B2_мпп kosmos-cars.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:15:42,040 - INFO -     Fetching phones: project_id=1754535, page=1
+2026-02-09 23:15:46,197 - INFO -     Fetching phones: project_id=1754535, page=2
+2026-02-09 23:15:46,370 - INFO -     No more phones for project_id=1754535, stop pagination
+2026-02-09 23:15:46,374 - INFO -   Project 120/932 id=1754536 name='B2_мпп varshavka91.ru'
+2026-02-09 23:15:46,374 - INFO -     Fetching phones: project_id=1754536, page=1
+2026-02-09 23:15:54,044 - INFO -     Fetching phones: project_id=1754536, page=2
+2026-02-09 23:16:01,568 - INFO -     Fetching phones: project_id=1754536, page=3
+2026-02-09 23:16:09,019 - INFO -     Fetching phones: project_id=1754536, page=4
+2026-02-09 23:16:16,469 - INFO -     Fetching phones: project_id=1754536, page=5
+2026-02-09 23:16:22,154 - INFO -     Fetching phones: project_id=1754536, page=6
+2026-02-09 23:16:22,336 - INFO -     No more phones for project_id=1754536, stop pagination
+2026-02-09 23:16:22,340 - INFO -   Project 121/932 id=1754567 name='B2_мпп автоград-м.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:16:22,341 - INFO -     Fetching phones: project_id=1754567, page=1
+2026-02-09 23:16:24,437 - INFO -     Fetching phones: project_id=1754567, page=2
+2026-02-09 23:16:24,612 - INFO -     No more phones for project_id=1754567, stop pagination
+2026-02-09 23:16:24,616 - INFO -   Project 122/932 id=1754810 name='B2_нс moscow-autosalon.ru'
+2026-02-09 23:16:24,616 - INFO -     Fetching phones: project_id=1754810, page=1
+2026-02-09 23:16:26,405 - INFO -     Fetching phones: project_id=1754810, page=2
+2026-02-09 23:16:26,595 - INFO -     No more phones for project_id=1754810, stop pagination
+2026-02-09 23:16:26,598 - INFO -   Project 123/932 id=1814824 name='B2_мпп carro.ru'
+2026-02-09 23:16:26,598 - INFO -     Fetching phones: project_id=1814824, page=1
+2026-02-09 23:16:27,840 - INFO -     Fetching phones: project_id=1814824, page=2
+2026-02-09 23:16:28,015 - INFO -     No more phones for project_id=1814824, stop pagination
+2026-02-09 23:16:28,018 - INFO -   Project 124/932 id=1814841 name='B1_мпп 2 azimut-cars.ru ПАРТНЕР ПРОСИЛ УБРАТЬ'
+2026-02-09 23:16:28,018 - INFO -     Fetching phones: project_id=1814841, page=1
+2026-02-09 23:16:28,706 - INFO -     Fetching phones: project_id=1814841, page=2
+2026-02-09 23:16:28,877 - INFO -     No more phones for project_id=1814841, stop pagination
+2026-02-09 23:16:28,883 - INFO -   Project 125/932 id=1814842 name='B2_мпп 2 azimut-cars.ru ПАРТНЕР ПРОСИЛ УБРАТЬ'
+2026-02-09 23:16:28,883 - INFO -     Fetching phones: project_id=1814842, page=1
+2026-02-09 23:16:29,656 - INFO -     Fetching phones: project_id=1814842, page=2
+2026-02-09 23:16:29,830 - INFO -     No more phones for project_id=1814842, stop pagination
+2026-02-09 23:16:29,834 - INFO -   Project 126/932 id=1814843 name='B3_мпп 2 azimut-cars.ru ПАРТНЕР ПРОСИЛ УБРАТЬ'
+2026-02-09 23:16:29,834 - INFO -     Fetching phones: project_id=1814843, page=1
+2026-02-09 23:16:30,637 - INFO -     Fetching phones: project_id=1814843, page=2
+2026-02-09 23:16:30,819 - INFO -     No more phones for project_id=1814843, stop pagination
+2026-02-09 23:16:30,823 - INFO -   Project 127/932 id=1814883 name='B1_мпп ац-дубровка.рф'
+2026-02-09 23:16:30,823 - INFO -     Fetching phones: project_id=1814883, page=1
+2026-02-09 23:16:32,307 - INFO -     Fetching phones: project_id=1814883, page=2
+2026-02-09 23:16:32,480 - INFO -     No more phones for project_id=1814883, stop pagination
+2026-02-09 23:16:32,485 - INFO -   Project 128/932 id=1814884 name='B2_мпп ац-дубровка.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:16:32,485 - INFO -     Fetching phones: project_id=1814884, page=1
+2026-02-09 23:16:35,135 - INFO -     Fetching phones: project_id=1814884, page=2
+2026-02-09 23:16:35,308 - INFO -     No more phones for project_id=1814884, stop pagination
+2026-02-09 23:16:35,313 - INFO -   Project 129/932 id=1814916 name='B2_мпп 2 freshauto.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:16:35,314 - INFO -     Fetching phones: project_id=1814916, page=1
+2026-02-09 23:16:36,171 - INFO -     Fetching phones: project_id=1814916, page=2
+2026-02-09 23:16:38,468 - INFO -     No more phones for project_id=1814916, stop pagination
+2026-02-09 23:16:38,471 - INFO -   Project 130/932 id=1814971 name='B1_мпп takeAvto'
+2026-02-09 23:16:38,473 - INFO -     Fetching phones: project_id=1814971, page=1
+2026-02-09 23:16:39,395 - INFO -     Fetching phones: project_id=1814971, page=2
+2026-02-09 23:16:39,571 - INFO -     No more phones for project_id=1814971, stop pagination
+2026-02-09 23:16:39,577 - INFO -   Project 131/932 id=1814973 name='B3_мпп takeAvto'
+2026-02-09 23:16:39,577 - INFO -     Fetching phones: project_id=1814973, page=1
+2026-02-09 23:16:41,762 - INFO -     Fetching phones: project_id=1814973, page=2
+2026-02-09 23:16:41,937 - INFO -     No more phones for project_id=1814973, stop pagination
+2026-02-09 23:16:41,941 - INFO -   Project 132/932 id=1815009 name='B3_мпп kia-favorit.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:16:41,941 - INFO -     Fetching phones: project_id=1815009, page=1
+2026-02-09 23:16:43,150 - INFO -     Fetching phones: project_id=1815009, page=2
+2026-02-09 23:16:43,329 - INFO -     No more phones for project_id=1815009, stop pagination
+2026-02-09 23:16:43,333 - INFO -   Project 133/932 id=1815026 name='B1_мпп msk-auto-dealer.ru'
+2026-02-09 23:16:43,334 - INFO -     Fetching phones: project_id=1815026, page=1
+2026-02-09 23:16:51,059 - INFO -     Fetching phones: project_id=1815026, page=2
+2026-02-09 23:16:54,810 - INFO -     Fetching phones: project_id=1815026, page=3
+2026-02-09 23:16:54,998 - INFO -     No more phones for project_id=1815026, stop pagination
+2026-02-09 23:16:55,001 - INFO -   Project 134/932 id=1815027 name='B2_мпп msk-auto-dealer.ru'
+2026-02-09 23:16:55,001 - INFO -     Fetching phones: project_id=1815027, page=1
+2026-02-09 23:17:02,473 - INFO -     Fetching phones: project_id=1815027, page=2
+2026-02-09 23:17:06,457 - INFO -     Fetching phones: project_id=1815027, page=3
+2026-02-09 23:17:06,634 - INFO -     No more phones for project_id=1815027, stop pagination
+2026-02-09 23:17:06,638 - INFO -   Project 135/932 id=1815096 name='B3_мпп 2 автоград-м.рф'
+2026-02-09 23:17:06,638 - INFO -     Fetching phones: project_id=1815096, page=1
+2026-02-09 23:17:07,535 - INFO -     Fetching phones: project_id=1815096, page=2
+2026-02-09 23:17:07,707 - INFO -     No more phones for project_id=1815096, stop pagination
+2026-02-09 23:17:07,711 - INFO -   Project 136/932 id=1815140 name='B1_мпп 2 genzes.ru'
+2026-02-09 23:17:07,711 - INFO -     Fetching phones: project_id=1815140, page=1
+2026-02-09 23:17:08,458 - INFO -     Fetching phones: project_id=1815140, page=2
+2026-02-09 23:17:08,639 - INFO -     No more phones for project_id=1815140, stop pagination
+2026-02-09 23:17:08,643 - INFO -   Project 137/932 id=1815141 name='B2_мпп 2 genzes.ru'
+2026-02-09 23:17:08,644 - INFO -     Fetching phones: project_id=1815141, page=1
+2026-02-09 23:17:09,340 - INFO -     Fetching phones: project_id=1815141, page=2
+2026-02-09 23:17:09,513 - INFO -     No more phones for project_id=1815141, stop pagination
+2026-02-09 23:17:09,518 - INFO -   Project 138/932 id=1815156 name='B1_мпп avilon-trade.ru'
+2026-02-09 23:17:09,518 - INFO -     Fetching phones: project_id=1815156, page=1
+2026-02-09 23:17:10,316 - INFO -     Fetching phones: project_id=1815156, page=2
+2026-02-09 23:17:10,492 - INFO -     No more phones for project_id=1815156, stop pagination
+2026-02-09 23:17:10,495 - INFO -   Project 139/932 id=1815157 name='B2_мпп avilon-trade.ru'
+2026-02-09 23:17:10,495 - INFO -     Fetching phones: project_id=1815157, page=1
+2026-02-09 23:17:11,258 - INFO -     Fetching phones: project_id=1815157, page=2
+2026-02-09 23:17:11,433 - INFO -     No more phones for project_id=1815157, stop pagination
+2026-02-09 23:17:11,436 - INFO -   Project 140/932 id=1815158 name='B3_мпп avilon-trade.ru'
+2026-02-09 23:17:11,439 - INFO -     Fetching phones: project_id=1815158, page=1
+2026-02-09 23:17:12,207 - INFO -     Fetching phones: project_id=1815158, page=2
+2026-02-09 23:17:12,379 - INFO -     No more phones for project_id=1815158, stop pagination
+2026-02-09 23:17:12,383 - INFO -   Project 141/932 id=1815170 name='B1_мпп carwinmotors.ru'
+2026-02-09 23:17:12,383 - INFO -     Fetching phones: project_id=1815170, page=1
+2026-02-09 23:17:13,098 - INFO -     Fetching phones: project_id=1815170, page=2
+2026-02-09 23:17:13,268 - INFO -     No more phones for project_id=1815170, stop pagination
+2026-02-09 23:17:13,272 - INFO -   Project 142/932 id=1815171 name='B2_мпп carwinmotors.ru'
+2026-02-09 23:17:13,275 - INFO -     Fetching phones: project_id=1815171, page=1
+2026-02-09 23:17:14,002 - INFO -     Fetching phones: project_id=1815171, page=2
+2026-02-09 23:17:14,175 - INFO -     No more phones for project_id=1815171, stop pagination
+2026-02-09 23:17:14,180 - INFO -   Project 143/932 id=1815172 name='B3_мпп carwinmotors.ru'
+2026-02-09 23:17:14,180 - INFO -     Fetching phones: project_id=1815172, page=1
+2026-02-09 23:17:14,876 - INFO -     Fetching phones: project_id=1815172, page=2
+2026-02-09 23:17:15,050 - INFO -     No more phones for project_id=1815172, stop pagination
+2026-02-09 23:17:15,053 - INFO -   Project 144/932 id=1815183 name='B1_мпп 2 carwinmotors.ru'
+2026-02-09 23:17:15,053 - INFO -     Fetching phones: project_id=1815183, page=1
+2026-02-09 23:17:17,328 - INFO -     Fetching phones: project_id=1815183, page=2
+2026-02-09 23:17:17,503 - INFO -     No more phones for project_id=1815183, stop pagination
+2026-02-09 23:17:17,506 - INFO -   Project 145/932 id=1815185 name='B3_мпп 2 carwinmotors.ru'
+2026-02-09 23:17:17,506 - INFO -     Fetching phones: project_id=1815185, page=1
+2026-02-09 23:17:21,615 - INFO -     Fetching phones: project_id=1815185, page=2
+2026-02-09 23:17:21,789 - INFO -     No more phones for project_id=1815185, stop pagination
+2026-02-09 23:17:21,793 - INFO -   Project 146/932 id=1815436 name='B1_мпп 2 armada-cars.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:17:21,793 - INFO -     Fetching phones: project_id=1815436, page=1
+2026-02-09 23:17:22,816 - INFO -     Fetching phones: project_id=1815436, page=2
+2026-02-09 23:17:22,997 - INFO -     No more phones for project_id=1815436, stop pagination
+2026-02-09 23:17:23,002 - INFO -   Project 147/932 id=1815438 name='B3_мпп 2 armada-cars.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:17:23,002 - INFO -     Fetching phones: project_id=1815438, page=1
+2026-02-09 23:17:25,045 - INFO -     Fetching phones: project_id=1815438, page=2
+2026-02-09 23:17:25,220 - INFO -     No more phones for project_id=1815438, stop pagination
+2026-02-09 23:17:25,224 - INFO -   Project 148/932 id=1815498 name='B2_мпп 1'
+2026-02-09 23:17:25,224 - INFO -     Fetching phones: project_id=1815498, page=1
+2026-02-09 23:17:26,337 - INFO -     Fetching phones: project_id=1815498, page=2
+2026-02-09 23:17:26,515 - INFO -     No more phones for project_id=1815498, stop pagination
+2026-02-09 23:17:26,520 - INFO -   Project 149/932 id=1815499 name='B3_мпп 1'
+2026-02-09 23:17:26,520 - INFO -     Fetching phones: project_id=1815499, page=1
+2026-02-09 23:17:27,707 - INFO -     Fetching phones: project_id=1815499, page=2
+2026-02-09 23:17:27,881 - INFO -     No more phones for project_id=1815499, stop pagination
+2026-02-09 23:17:27,885 - INFO -   Project 150/932 id=1900888 name='B1_нсо varshavka91.ru'
+2026-02-09 23:17:27,885 - INFO -     Fetching phones: project_id=1900888, page=1
+2026-02-09 23:17:28,619 - INFO -     Fetching phones: project_id=1900888, page=2
+2026-02-09 23:17:28,795 - INFO -     No more phones for project_id=1900888, stop pagination
+2026-02-09 23:17:28,799 - INFO -   Project 151/932 id=1901459 name='B2_мпп 3 автоград-м.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:17:28,800 - INFO -     Fetching phones: project_id=1901459, page=1
+2026-02-09 23:17:31,755 - INFO -     Fetching phones: project_id=1901459, page=2
+2026-02-09 23:17:31,929 - INFO -     No more phones for project_id=1901459, stop pagination
+2026-02-09 23:17:31,933 - INFO -   Project 152/932 id=1901460 name='B3_мпп 3 автоград-м.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:17:31,933 - INFO -     Fetching phones: project_id=1901460, page=1
+2026-02-09 23:17:35,454 - INFO -     Fetching phones: project_id=1901460, page=2
+2026-02-09 23:17:35,622 - INFO -     No more phones for project_id=1901460, stop pagination
+2026-02-09 23:17:35,626 - INFO -   Project 153/932 id=1901487 name='B1_мпп 2 avantaauto.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:17:35,626 - INFO -     Fetching phones: project_id=1901487, page=1
+2026-02-09 23:17:36,678 - INFO -     Fetching phones: project_id=1901487, page=2
+2026-02-09 23:17:36,850 - INFO -     No more phones for project_id=1901487, stop pagination
+2026-02-09 23:17:36,855 - INFO -   Project 154/932 id=1901489 name='B3_мпп 2 avantaauto.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:17:36,855 - INFO -     Fetching phones: project_id=1901489, page=1
+2026-02-09 23:17:38,093 - INFO -     Fetching phones: project_id=1901489, page=2
+2026-02-09 23:17:38,269 - INFO -     No more phones for project_id=1901489, stop pagination
+2026-02-09 23:17:38,274 - INFO -   Project 155/932 id=1901495 name='B1_мпп рольф'
+2026-02-09 23:17:38,274 - INFO -     Fetching phones: project_id=1901495, page=1
+2026-02-09 23:17:39,909 - INFO -     Fetching phones: project_id=1901495, page=2
+2026-02-09 23:17:40,084 - INFO -     No more phones for project_id=1901495, stop pagination
+2026-02-09 23:17:40,088 - INFO -   Project 156/932 id=1901497 name='B3_мпп рольф'
+2026-02-09 23:17:40,088 - INFO -     Fetching phones: project_id=1901497, page=1
+2026-02-09 23:17:43,060 - INFO -     Fetching phones: project_id=1901497, page=2
+2026-02-09 23:17:43,231 - INFO -     No more phones for project_id=1901497, stop pagination
+2026-02-09 23:17:43,236 - INFO -   Project 157/932 id=1901508 name='B2_мпп авто'
+2026-02-09 23:17:43,236 - INFO -     Fetching phones: project_id=1901508, page=1
+2026-02-09 23:17:44,035 - INFO -     Fetching phones: project_id=1901508, page=2
+2026-02-09 23:17:44,210 - INFO -     No more phones for project_id=1901508, stop pagination
+2026-02-09 23:17:44,214 - INFO -   Project 158/932 id=1901559 name='B1_мпп автосалон добролюбово'
+2026-02-09 23:17:44,214 - INFO -     Fetching phones: project_id=1901559, page=1
+2026-02-09 23:17:44,929 - INFO -     Fetching phones: project_id=1901559, page=2
+2026-02-09 23:17:45,115 - INFO -     No more phones for project_id=1901559, stop pagination
+2026-02-09 23:17:45,118 - INFO -   Project 159/932 id=1901561 name='B3_мпп автосалон добролюбово'
+2026-02-09 23:17:45,122 - INFO -     Fetching phones: project_id=1901561, page=1
+2026-02-09 23:17:45,846 - INFO -     Fetching phones: project_id=1901561, page=2
+2026-02-09 23:17:46,029 - INFO -     No more phones for project_id=1901561, stop pagination
+2026-02-09 23:17:46,033 - INFO -   Project 160/932 id=1935889 name='B1_мпп автоцентр на добролюбово'
+2026-02-09 23:17:46,033 - INFO -     Fetching phones: project_id=1935889, page=1
+2026-02-09 23:17:46,926 - INFO -     Fetching phones: project_id=1935889, page=2
+2026-02-09 23:17:47,095 - INFO -     No more phones for project_id=1935889, stop pagination
+2026-02-09 23:17:47,115 - INFO -   Project 161/932 id=1935890 name='B2_мпп автоцентр на добролюбово'
+2026-02-09 23:17:47,115 - INFO -     Fetching phones: project_id=1935890, page=1
+2026-02-09 23:17:47,908 - INFO -     Fetching phones: project_id=1935890, page=2
+2026-02-09 23:17:48,080 - INFO -     No more phones for project_id=1935890, stop pagination
+2026-02-09 23:17:48,084 - INFO -   Project 162/932 id=2087995 name='B1_нс карты a автоград-м.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:17:48,084 - INFO -     Fetching phones: project_id=2087995, page=1
+2026-02-09 23:17:48,766 - INFO -     Fetching phones: project_id=2087995, page=2
+2026-02-09 23:17:48,942 - INFO -     No more phones for project_id=2087995, stop pagination
+2026-02-09 23:17:48,945 - INFO -   Project 163/932 id=2087996 name='B2_нс карты a автоград-м.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:17:48,947 - INFO -     Fetching phones: project_id=2087996, page=1
+2026-02-09 23:17:49,704 - INFO -     Fetching phones: project_id=2087996, page=2
+2026-02-09 23:17:49,875 - INFO -     No more phones for project_id=2087996, stop pagination
+2026-02-09 23:17:49,880 - INFO -   Project 164/932 id=2088015 name='B3_нс карты varshavka91.ru'
+2026-02-09 23:17:49,880 - INFO -     Fetching phones: project_id=2088015, page=1
+2026-02-09 23:17:50,622 - INFO -     Fetching phones: project_id=2088015, page=2
+2026-02-09 23:17:50,792 - INFO -     No more phones for project_id=2088015, stop pagination
+2026-02-09 23:17:50,796 - INFO -   Project 165/932 id=2088023 name='B2_нс карты 2 varshavka91.ru'
+2026-02-09 23:17:50,796 - INFO -     Fetching phones: project_id=2088023, page=1
+2026-02-09 23:17:51,520 - INFO -     Fetching phones: project_id=2088023, page=2
+2026-02-09 23:17:51,699 - INFO -     No more phones for project_id=2088023, stop pagination
+2026-02-09 23:17:51,703 - INFO -   Project 166/932 id=2088024 name='B3_нс карты 2 varshavka91.ru'
+2026-02-09 23:17:51,703 - INFO -     Fetching phones: project_id=2088024, page=1
+2026-02-09 23:17:52,410 - INFO -     Fetching phones: project_id=2088024, page=2
+2026-02-09 23:17:52,589 - INFO -     No more phones for project_id=2088024, stop pagination
+2026-02-09 23:17:52,592 - INFO -   Project 167/932 id=2088029 name='B2_нс карты armada-cars.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:17:52,593 - INFO -     Fetching phones: project_id=2088029, page=1
+2026-02-09 23:17:53,303 - INFO -     Fetching phones: project_id=2088029, page=2
+2026-02-09 23:17:53,474 - INFO -     No more phones for project_id=2088029, stop pagination
+2026-02-09 23:17:53,479 - INFO -   Project 168/932 id=2088046 name='B1_нс 2 carwinmotors.ru'
+2026-02-09 23:17:53,479 - INFO -     Fetching phones: project_id=2088046, page=1
+2026-02-09 23:17:54,187 - INFO -     Fetching phones: project_id=2088046, page=2
+2026-02-09 23:17:54,360 - INFO -     No more phones for project_id=2088046, stop pagination
+2026-02-09 23:17:54,365 - INFO -   Project 169/932 id=2088047 name='B2_нс 2 carwinmotors.ru'
+2026-02-09 23:17:54,365 - INFO -     Fetching phones: project_id=2088047, page=1
+2026-02-09 23:17:55,135 - INFO -     Fetching phones: project_id=2088047, page=2
+2026-02-09 23:17:55,308 - INFO -     No more phones for project_id=2088047, stop pagination
+2026-02-09 23:17:55,312 - INFO -   Project 170/932 id=2088048 name='B3_нс 2 carwinmotors.ru'
+2026-02-09 23:17:55,312 - INFO -     Fetching phones: project_id=2088048, page=1
+2026-02-09 23:17:56,065 - INFO -     Fetching phones: project_id=2088048, page=2
+2026-02-09 23:17:56,234 - INFO -     No more phones for project_id=2088048, stop pagination
+2026-02-09 23:17:56,238 - INFO -   Project 171/932 id=2088052 name='B1_нс 2 avilon-trade.ru'
+2026-02-09 23:17:56,244 - INFO -     Fetching phones: project_id=2088052, page=1
+2026-02-09 23:17:56,934 - INFO -     Fetching phones: project_id=2088052, page=2
+2026-02-09 23:17:57,102 - INFO -     No more phones for project_id=2088052, stop pagination
+2026-02-09 23:17:57,106 - INFO -   Project 172/932 id=2088053 name='B2_нс 2 avilon-trade.ru'
+2026-02-09 23:17:57,106 - INFO -     Fetching phones: project_id=2088053, page=1
+2026-02-09 23:17:57,947 - INFO -     Fetching phones: project_id=2088053, page=2
+2026-02-09 23:17:58,122 - INFO -     No more phones for project_id=2088053, stop pagination
+2026-02-09 23:17:58,128 - INFO -   Project 173/932 id=2088054 name='B3_нс 2 avilon-trade.ru'
+2026-02-09 23:17:58,128 - INFO -     Fetching phones: project_id=2088054, page=1
+2026-02-09 23:17:59,217 - INFO -     Fetching phones: project_id=2088054, page=2
+2026-02-09 23:17:59,388 - INFO -     No more phones for project_id=2088054, stop pagination
+2026-02-09 23:17:59,392 - INFO -   Project 174/932 id=2088059 name='B2_нс 2  genzes.ru'
+2026-02-09 23:17:59,392 - INFO -     Fetching phones: project_id=2088059, page=1
+2026-02-09 23:18:02,365 - INFO -     Fetching phones: project_id=2088059, page=2
+2026-02-09 23:18:02,541 - INFO -     No more phones for project_id=2088059, stop pagination
+2026-02-09 23:18:02,545 - INFO -   Project 175/932 id=2088060 name='B3_нс 2  genzes.ru'
+2026-02-09 23:18:02,547 - INFO -     Fetching phones: project_id=2088060, page=1
+2026-02-09 23:18:04,630 - INFO -     Fetching phones: project_id=2088060, page=2
+2026-02-09 23:18:04,797 - INFO -     No more phones for project_id=2088060, stop pagination
+2026-02-09 23:18:04,801 - INFO -   Project 176/932 id=2088061 name='B1_нс карты genzes.ru'
+2026-02-09 23:18:04,804 - INFO -     Fetching phones: project_id=2088061, page=1
+2026-02-09 23:18:05,504 - INFO -     Fetching phones: project_id=2088061, page=2
+2026-02-09 23:18:05,671 - INFO -     No more phones for project_id=2088061, stop pagination
+2026-02-09 23:18:05,675 - INFO -   Project 177/932 id=2088063 name='B3_нс карты genzes.ru'
+2026-02-09 23:18:05,675 - INFO -     Fetching phones: project_id=2088063, page=1
+2026-02-09 23:18:06,622 - INFO -     Fetching phones: project_id=2088063, page=2
+2026-02-09 23:18:06,792 - INFO -     No more phones for project_id=2088063, stop pagination
+2026-02-09 23:18:06,797 - INFO -   Project 178/932 id=2088077 name='B2_нс 2 kia-favorit.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:18:06,797 - INFO -     Fetching phones: project_id=2088077, page=1
+2026-02-09 23:18:07,539 - INFO -     Fetching phones: project_id=2088077, page=2
+2026-02-09 23:18:07,719 - INFO -     No more phones for project_id=2088077, stop pagination
+2026-02-09 23:18:07,723 - INFO -   Project 179/932 id=2088078 name='B3_нс 2 kia-favorit.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:18:07,723 - INFO -     Fetching phones: project_id=2088078, page=1
+2026-02-09 23:18:08,457 - INFO -     Fetching phones: project_id=2088078, page=2
+2026-02-09 23:18:08,631 - INFO -     No more phones for project_id=2088078, stop pagination
+2026-02-09 23:18:08,636 - INFO -   Project 180/932 id=2088115 name='B2_нс 2 carro.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:18:08,637 - INFO -     Fetching phones: project_id=2088115, page=1
+2026-02-09 23:18:09,336 - INFO -     Fetching phones: project_id=2088115, page=2
+2026-02-09 23:18:09,503 - INFO -     No more phones for project_id=2088115, stop pagination
+2026-02-09 23:18:09,508 - INFO -   Project 181/932 id=2088116 name='B3_нс 2 carro.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:18:09,509 - INFO -     Fetching phones: project_id=2088116, page=1
+2026-02-09 23:18:10,208 - INFO -     Fetching phones: project_id=2088116, page=2
+2026-02-09 23:18:10,378 - INFO -     No more phones for project_id=2088116, stop pagination
+2026-02-09 23:18:10,381 - INFO -   Project 182/932 id=2088118 name='B1_нс 2 auto-zhir.ru'
+2026-02-09 23:18:10,381 - INFO -     Fetching phones: project_id=2088118, page=1
+2026-02-09 23:18:11,078 - INFO -     Fetching phones: project_id=2088118, page=2
+2026-02-09 23:18:11,247 - INFO -     No more phones for project_id=2088118, stop pagination
+2026-02-09 23:18:11,252 - INFO -   Project 183/932 id=2088119 name='B2_нс 2 auto-zhir.ru'
+2026-02-09 23:18:11,252 - INFO -     Fetching phones: project_id=2088119, page=1
+2026-02-09 23:18:11,945 - INFO -     Fetching phones: project_id=2088119, page=2
+2026-02-09 23:18:12,115 - INFO -     No more phones for project_id=2088119, stop pagination
+2026-02-09 23:18:12,119 - INFO -   Project 184/932 id=2088120 name='B3_нс 2 auto-zhir.ru'
+2026-02-09 23:18:12,119 - INFO -     Fetching phones: project_id=2088120, page=1
+2026-02-09 23:18:12,831 - INFO -     Fetching phones: project_id=2088120, page=2
+2026-02-09 23:18:13,005 - INFO -     No more phones for project_id=2088120, stop pagination
+2026-02-09 23:18:13,009 - INFO -   Project 185/932 id=2088147 name='B1_нс 2 mb-i.ru'
+2026-02-09 23:18:13,009 - INFO -     Fetching phones: project_id=2088147, page=1
+2026-02-09 23:18:14,021 - INFO -     Fetching phones: project_id=2088147, page=2
+2026-02-09 23:18:14,195 - INFO -     No more phones for project_id=2088147, stop pagination
+2026-02-09 23:18:14,414 - INFO -   Project 186/932 id=2088156 name='B1_нс 2 autoexpert.moscow ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:18:14,415 - INFO -     Fetching phones: project_id=2088156, page=1
+2026-02-09 23:18:15,478 - INFO -     Fetching phones: project_id=2088156, page=2
+2026-02-09 23:18:15,649 - INFO -     No more phones for project_id=2088156, stop pagination
+2026-02-09 23:18:15,884 - INFO -   Project 187/932 id=2088157 name='B2_нс 2 autoexpert.moscow ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:18:15,884 - INFO -     Fetching phones: project_id=2088157, page=1
+2026-02-09 23:18:17,331 - INFO -     Fetching phones: project_id=2088157, page=2
+2026-02-09 23:18:17,503 - INFO -     No more phones for project_id=2088157, stop pagination
+2026-02-09 23:18:17,507 - INFO -   Project 188/932 id=2088158 name='B3_нс 2 autoexpert.moscow ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:18:17,507 - INFO -     Fetching phones: project_id=2088158, page=1
+2026-02-09 23:18:18,581 - INFO -     Fetching phones: project_id=2088158, page=2
+2026-02-09 23:18:18,748 - INFO -     No more phones for project_id=2088158, stop pagination
+2026-02-09 23:18:18,752 - INFO -   Project 189/932 id=2088169 name='B2_нс 2 rolf.ru'
+2026-02-09 23:18:18,752 - INFO -     Fetching phones: project_id=2088169, page=1
+2026-02-09 23:18:19,494 - INFO -     Fetching phones: project_id=2088169, page=2
+2026-02-09 23:18:19,666 - INFO -     No more phones for project_id=2088169, stop pagination
+2026-02-09 23:18:19,670 - INFO -   Project 190/932 id=2088170 name='B3_нс 2 rolf.ru'
+2026-02-09 23:18:19,670 - INFO -     Fetching phones: project_id=2088170, page=1
+2026-02-09 23:18:20,475 - INFO -     Fetching phones: project_id=2088170, page=2
+2026-02-09 23:18:20,652 - INFO -     No more phones for project_id=2088170, stop pagination
+2026-02-09 23:18:20,655 - INFO -   Project 191/932 id=2088174 name='B1_нс карты avtomir.ru'
+2026-02-09 23:18:20,655 - INFO -     Fetching phones: project_id=2088174, page=1
+2026-02-09 23:18:21,369 - INFO -     Fetching phones: project_id=2088174, page=2
+2026-02-09 23:18:21,536 - INFO -     No more phones for project_id=2088174, stop pagination
+2026-02-09 23:18:21,540 - INFO -   Project 192/932 id=2088182 name='B3_нс sale.omoda-avtoport.ru'
+2026-02-09 23:18:21,540 - INFO -     Fetching phones: project_id=2088182, page=1
+2026-02-09 23:18:22,380 - INFO -     Fetching phones: project_id=2088182, page=2
+2026-02-09 23:18:22,552 - INFO -     No more phones for project_id=2088182, stop pagination
+2026-02-09 23:18:22,556 - INFO -   Project 193/932 id=2088193 name='B2_нс карты www.major-expert.ru'
+2026-02-09 23:18:22,556 - INFO -     Fetching phones: project_id=2088193, page=1
+2026-02-09 23:18:23,300 - INFO -     Fetching phones: project_id=2088193, page=2
+2026-02-09 23:18:23,472 - INFO -     No more phones for project_id=2088193, stop pagination
+2026-02-09 23:18:23,476 - INFO -   Project 194/932 id=2109023 name='B1_нов нс ац-дубровка.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:18:23,476 - INFO -     Fetching phones: project_id=2109023, page=1
+2026-02-09 23:18:30,268 - INFO -     Fetching phones: project_id=2109023, page=2
+2026-02-09 23:18:30,437 - INFO -     No more phones for project_id=2109023, stop pagination
+2026-02-09 23:18:30,442 - INFO -   Project 195/932 id=2109024 name='B2_нов нс ац-дубровка.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:18:30,442 - INFO -     Fetching phones: project_id=2109024, page=1
+2026-02-09 23:18:37,935 - INFO -     Fetching phones: project_id=2109024, page=2
+2026-02-09 23:18:39,517 - INFO -     Fetching phones: project_id=2109024, page=3
+2026-02-09 23:18:39,685 - INFO -     No more phones for project_id=2109024, stop pagination
+2026-02-09 23:18:39,690 - INFO -   Project 196/932 id=2109025 name='B3_нов нс ац-дубровка.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:18:39,690 - INFO -     Fetching phones: project_id=2109025, page=1
+2026-02-09 23:18:46,549 - INFO -     Fetching phones: project_id=2109025, page=2
+2026-02-09 23:18:46,724 - INFO -     No more phones for project_id=2109025, stop pagination
+2026-02-09 23:18:46,729 - INFO -   Project 197/932 id=2109026 name='B1_нов нс carro.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:18:46,729 - INFO -     Fetching phones: project_id=2109026, page=1
+2026-02-09 23:18:47,584 - INFO -     Fetching phones: project_id=2109026, page=2
+2026-02-09 23:18:47,757 - INFO -     No more phones for project_id=2109026, stop pagination
+2026-02-09 23:18:47,761 - INFO -   Project 198/932 id=2109027 name='B2_нов нс carro.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:18:47,762 - INFO -     Fetching phones: project_id=2109027, page=1
+2026-02-09 23:18:50,025 - INFO -     Fetching phones: project_id=2109027, page=2
+2026-02-09 23:18:50,198 - INFO -     No more phones for project_id=2109027, stop pagination
+2026-02-09 23:18:50,203 - INFO -   Project 199/932 id=2109033 name='B2_нов нс moscow-autosalon.ru'
+2026-02-09 23:18:50,203 - INFO -     Fetching phones: project_id=2109033, page=1
+2026-02-09 23:18:50,948 - INFO -     Fetching phones: project_id=2109033, page=2
+2026-02-09 23:18:51,120 - INFO -     No more phones for project_id=2109033, stop pagination
+2026-02-09 23:18:51,124 - INFO -   Project 200/932 id=2109034 name='B3_нов нс moscow-autosalon.ru'
+2026-02-09 23:18:51,124 - INFO -     Fetching phones: project_id=2109034, page=1
+2026-02-09 23:18:51,924 - INFO -     Fetching phones: project_id=2109034, page=2
+2026-02-09 23:18:52,091 - INFO -     No more phones for project_id=2109034, stop pagination
+2026-02-09 23:18:52,095 - INFO -   Project 201/932 id=2109057 name='B3_нов нс www.avtogermes.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:18:52,095 - INFO -     Fetching phones: project_id=2109057, page=1
+2026-02-09 23:18:55,418 - INFO -     Fetching phones: project_id=2109057, page=2
+2026-02-09 23:18:55,591 - INFO -     No more phones for project_id=2109057, stop pagination
+2026-02-09 23:18:55,595 - INFO -   Project 202/932 id=2144148 name='B2_мпп 2'
+2026-02-09 23:18:55,595 - INFO -     Fetching phones: project_id=2144148, page=1
+2026-02-09 23:18:57,728 - INFO -     Fetching phones: project_id=2144148, page=2
+2026-02-09 23:18:57,903 - INFO -     No more phones for project_id=2144148, stop pagination
+2026-02-09 23:18:57,908 - INFO -   Project 203/932 id=2144149 name='B3_мпп 2'
+2026-02-09 23:18:57,908 - INFO -     Fetching phones: project_id=2144149, page=1
+2026-02-09 23:19:01,057 - INFO -     Fetching phones: project_id=2144149, page=2
+2026-02-09 23:19:01,228 - INFO -     No more phones for project_id=2144149, stop pagination
+2026-02-09 23:19:01,232 - INFO -   Project 204/932 id=2144153 name='B2_мпп 3'
+2026-02-09 23:19:01,232 - INFO -     Fetching phones: project_id=2144153, page=1
+2026-02-09 23:19:02,069 - INFO -     Fetching phones: project_id=2144153, page=2
+2026-02-09 23:19:02,239 - INFO -     No more phones for project_id=2144153, stop pagination
+2026-02-09 23:19:02,243 - INFO -   Project 205/932 id=2144154 name='B3_мпп 3'
+2026-02-09 23:19:02,243 - INFO -     Fetching phones: project_id=2144154, page=1
+2026-02-09 23:19:03,017 - INFO -     Fetching phones: project_id=2144154, page=2
+2026-02-09 23:19:03,187 - INFO -     No more phones for project_id=2144154, stop pagination
+2026-02-09 23:19:03,192 - INFO -   Project 206/932 id=2144161 name='B2_мпп 4'
+2026-02-09 23:19:03,192 - INFO -     Fetching phones: project_id=2144161, page=1
+2026-02-09 23:19:05,073 - INFO -     Fetching phones: project_id=2144161, page=2
+2026-02-09 23:19:05,254 - INFO -     No more phones for project_id=2144161, stop pagination
+2026-02-09 23:19:05,258 - INFO -   Project 207/932 id=2144162 name='B3_мпп 4'
+2026-02-09 23:19:05,258 - INFO -     Fetching phones: project_id=2144162, page=1
+2026-02-09 23:19:07,401 - INFO -     Fetching phones: project_id=2144162, page=2
+2026-02-09 23:19:07,575 - INFO -     No more phones for project_id=2144162, stop pagination
+2026-02-09 23:19:07,579 - INFO -   Project 208/932 id=2363982 name='B2_нс нов carwinmotors.ru'
+2026-02-09 23:19:07,579 - INFO -     Fetching phones: project_id=2363982, page=1
+2026-02-09 23:19:08,312 - INFO -     Fetching phones: project_id=2363982, page=2
+2026-02-09 23:19:08,491 - INFO -     No more phones for project_id=2363982, stop pagination
+2026-02-09 23:19:08,495 - INFO -   Project 209/932 id=2363983 name='B3_нс нов carwinmotors.ru'
+2026-02-09 23:19:08,495 - INFO -     Fetching phones: project_id=2363983, page=1
+2026-02-09 23:19:09,201 - INFO -     Fetching phones: project_id=2363983, page=2
+2026-02-09 23:19:09,373 - INFO -     No more phones for project_id=2363983, stop pagination
+2026-02-09 23:19:09,376 - INFO -   Project 210/932 id=2364028 name='B1_нс нов carmir-dealer.ru'
+2026-02-09 23:19:09,378 - INFO -     Fetching phones: project_id=2364028, page=1
+2026-02-09 23:19:15,839 - INFO -     Fetching phones: project_id=2364028, page=2
+2026-02-09 23:19:16,012 - INFO -     No more phones for project_id=2364028, stop pagination
+2026-02-09 23:19:16,016 - INFO -   Project 211/932 id=2364029 name='B2_нс нов carmir-dealer.ru'
+2026-02-09 23:19:16,016 - INFO -     Fetching phones: project_id=2364029, page=1
+2026-02-09 23:19:19,361 - INFO -     Fetching phones: project_id=2364029, page=2
+2026-02-09 23:19:19,527 - INFO -     No more phones for project_id=2364029, stop pagination
+2026-02-09 23:19:19,532 - INFO -   Project 212/932 id=2364030 name='B3_нс нов carmir-dealer.ru'
+2026-02-09 23:19:19,532 - INFO -     Fetching phones: project_id=2364030, page=1
+2026-02-09 23:19:24,068 - INFO -     Fetching phones: project_id=2364030, page=2
+2026-02-09 23:19:24,240 - INFO -     No more phones for project_id=2364030, stop pagination
+2026-02-09 23:19:24,244 - INFO -   Project 213/932 id=2364063 name='B2_нс нов avantaauto.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:19:24,244 - INFO -     Fetching phones: project_id=2364063, page=1
+2026-02-09 23:19:25,426 - INFO -     Fetching phones: project_id=2364063, page=2
+2026-02-09 23:19:25,596 - INFO -     No more phones for project_id=2364063, stop pagination
+2026-02-09 23:19:25,599 - INFO -   Project 214/932 id=2364064 name='B3_нс нов avantaauto.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:19:25,599 - INFO -     Fetching phones: project_id=2364064, page=1
+2026-02-09 23:19:26,535 - INFO -     Fetching phones: project_id=2364064, page=2
+2026-02-09 23:19:26,706 - INFO -     No more phones for project_id=2364064, stop pagination
+2026-02-09 23:19:26,709 - INFO -   Project 215/932 id=2364150 name='B2_нс нов armada-cars.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:19:26,709 - INFO -     Fetching phones: project_id=2364150, page=1
+2026-02-09 23:19:27,409 - INFO -     Fetching phones: project_id=2364150, page=2
+2026-02-09 23:19:27,576 - INFO -     No more phones for project_id=2364150, stop pagination
+2026-02-09 23:19:27,580 - INFO -   Project 216/932 id=2364163 name='B2_нс нов atlas-dealer.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:19:27,580 - INFO -     Fetching phones: project_id=2364163, page=1
+2026-02-09 23:19:28,553 - INFO -     Fetching phones: project_id=2364163, page=2
+2026-02-09 23:19:28,721 - INFO -     No more phones for project_id=2364163, stop pagination
+2026-02-09 23:19:28,724 - INFO -   Project 217/932 id=2364164 name='B3_нс нов atlas-dealer.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:19:28,725 - INFO -     Fetching phones: project_id=2364164, page=1
+2026-02-09 23:19:29,537 - INFO -     Fetching phones: project_id=2364164, page=2
+2026-02-09 23:19:29,710 - INFO -     No more phones for project_id=2364164, stop pagination
+2026-02-09 23:19:29,714 - INFO -   Project 218/932 id=2364516 name='B1_нс нов carpro.su ПАРТНЕР ПРОСИЛ УБРАТЬ'
+2026-02-09 23:19:29,714 - INFO -     Fetching phones: project_id=2364516, page=1
+2026-02-09 23:19:30,692 - INFO -     Fetching phones: project_id=2364516, page=2
+2026-02-09 23:19:30,863 - INFO -     No more phones for project_id=2364516, stop pagination
+2026-02-09 23:19:30,868 - INFO -   Project 219/932 id=2364518 name='B3_нс нов carpro.su ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:19:30,868 - INFO -     Fetching phones: project_id=2364518, page=1
+2026-02-09 23:19:31,797 - INFO -     Fetching phones: project_id=2364518, page=2
+2026-02-09 23:19:31,973 - INFO -     No more phones for project_id=2364518, stop pagination
+2026-02-09 23:19:31,976 - INFO -   Project 220/932 id=2364717 name='B1_нс нов kia-favorit.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:19:31,980 - INFO -     Fetching phones: project_id=2364717, page=1
+2026-02-09 23:19:32,818 - INFO -     Fetching phones: project_id=2364717, page=2
+2026-02-09 23:19:33,005 - INFO -     No more phones for project_id=2364717, stop pagination
+2026-02-09 23:19:33,009 - INFO -   Project 221/932 id=2364875 name='B1_нс нов www.major-expert.ru'
+2026-02-09 23:19:33,009 - INFO -     Fetching phones: project_id=2364875, page=1
+2026-02-09 23:19:33,877 - INFO -     Fetching phones: project_id=2364875, page=2
+2026-02-09 23:19:34,050 - INFO -     No more phones for project_id=2364875, stop pagination
+2026-02-09 23:19:34,054 - INFO -   Project 222/932 id=2364876 name='B2_нс нов www.major-expert.ru'
+2026-02-09 23:19:34,054 - INFO -     Fetching phones: project_id=2364876, page=1
+2026-02-09 23:19:36,834 - INFO -     Fetching phones: project_id=2364876, page=2
+2026-02-09 23:19:37,006 - INFO -     No more phones for project_id=2364876, stop pagination
+2026-02-09 23:19:37,010 - INFO -   Project 223/932 id=2364877 name='B3_нс нов www.major-expert.ru'
+2026-02-09 23:19:37,010 - INFO -     Fetching phones: project_id=2364877, page=1
+2026-02-09 23:19:39,182 - INFO -     Fetching phones: project_id=2364877, page=2
+2026-02-09 23:19:39,377 - INFO -     No more phones for project_id=2364877, stop pagination
+2026-02-09 23:19:39,382 - INFO -   Project 224/932 id=2598265 name='B1_мпп кросс-авто.рф'
+2026-02-09 23:19:39,384 - INFO -     Fetching phones: project_id=2598265, page=1
+2026-02-09 23:19:40,089 - INFO -     Fetching phones: project_id=2598265, page=2
+2026-02-09 23:19:40,260 - INFO -     No more phones for project_id=2598265, stop pagination
+2026-02-09 23:19:40,264 - INFO -   Project 225/932 id=2598266 name='B2_мпп кросс-авто.рф'
+2026-02-09 23:19:40,264 - INFO -     Fetching phones: project_id=2598266, page=1
+2026-02-09 23:19:41,073 - INFO -     Fetching phones: project_id=2598266, page=2
+2026-02-09 23:19:41,242 - INFO -     No more phones for project_id=2598266, stop pagination
+2026-02-09 23:19:41,245 - INFO -   Project 226/932 id=2598267 name='B3_мпп кросс-авто.рф'
+2026-02-09 23:19:41,246 - INFO -     Fetching phones: project_id=2598267, page=1
+2026-02-09 23:19:42,026 - INFO -     Fetching phones: project_id=2598267, page=2
+2026-02-09 23:19:42,214 - INFO -     No more phones for project_id=2598267, stop pagination
+2026-02-09 23:19:42,219 - INFO -   Project 227/932 id=2598293 name='B3_нс 3 autosalon-vektor.ru'
+2026-02-09 23:19:42,219 - INFO -     Fetching phones: project_id=2598293, page=1
+2026-02-09 23:19:42,914 - INFO -     Fetching phones: project_id=2598293, page=2
+2026-02-09 23:19:43,083 - INFO -     No more phones for project_id=2598293, stop pagination
+2026-02-09 23:19:43,088 - INFO -   Project 228/932 id=2598309 name='B1_мпп autosalon-vektor.ru'
+2026-02-09 23:19:43,090 - INFO -     Fetching phones: project_id=2598309, page=1
+2026-02-09 23:19:48,155 - INFO -     Fetching phones: project_id=2598309, page=2
+2026-02-09 23:19:48,322 - INFO -     No more phones for project_id=2598309, stop pagination
+2026-02-09 23:19:48,326 - INFO -   Project 229/932 id=2598311 name='B3_мпп autosalon-vektor.ru'
+2026-02-09 23:19:48,326 - INFO -     Fetching phones: project_id=2598311, page=1
+2026-02-09 23:19:50,037 - INFO -     Fetching phones: project_id=2598311, page=2
+2026-02-09 23:19:50,207 - INFO -     No more phones for project_id=2598311, stop pagination
+2026-02-09 23:19:50,211 - INFO -   Project 230/932 id=2598333 name='B2_мпп 2 autosalon-vektor.ru'
+2026-02-09 23:19:50,211 - INFO -     Fetching phones: project_id=2598333, page=1
+2026-02-09 23:19:54,511 - INFO -     Fetching phones: project_id=2598333, page=2
+2026-02-09 23:19:54,681 - INFO -     No more phones for project_id=2598333, stop pagination
+2026-02-09 23:19:54,686 - INFO -   Project 231/932 id=2598334 name='B3_мпп 2 autosalon-vektor.ru'
+2026-02-09 23:19:54,686 - INFO -     Fetching phones: project_id=2598334, page=1
+2026-02-09 23:19:57,902 - INFO -     Fetching phones: project_id=2598334, page=2
+2026-02-09 23:19:58,073 - INFO -     No more phones for project_id=2598334, stop pagination
+2026-02-09 23:19:58,076 - INFO -   Project 232/932 id=2598875 name='B2_мпп 2 avanta-avto-credit.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:19:58,076 - INFO -     Fetching phones: project_id=2598875, page=1
+2026-02-09 23:20:01,900 - INFO -     Fetching phones: project_id=2598875, page=2
+2026-02-09 23:20:02,081 - INFO -     No more phones for project_id=2598875, stop pagination
+2026-02-09 23:20:02,085 - INFO -   Project 233/932 id=2598907 name='B3_нс 3 avtomir.ru'
+2026-02-09 23:20:02,088 - INFO -     Fetching phones: project_id=2598907, page=1
+2026-02-09 23:20:02,789 - INFO -     Fetching phones: project_id=2598907, page=2
+2026-02-09 23:20:02,961 - INFO -     No more phones for project_id=2598907, stop pagination
+2026-02-09 23:20:02,966 - INFO -   Project 234/932 id=2598920 name='B3_нс 3 azbuka-cars.ru'
+2026-02-09 23:20:02,966 - INFO -     Fetching phones: project_id=2598920, page=1
+2026-02-09 23:20:03,669 - INFO -     Fetching phones: project_id=2598920, page=2
+2026-02-09 23:20:03,843 - INFO -     No more phones for project_id=2598920, stop pagination
+2026-02-09 23:20:03,847 - INFO -   Project 235/932 id=2598928 name='B2_нс 4 azbuka-cars.ru'
+2026-02-09 23:20:03,847 - INFO -     Fetching phones: project_id=2598928, page=1
+2026-02-09 23:20:04,541 - INFO -     Fetching phones: project_id=2598928, page=2
+2026-02-09 23:20:04,713 - INFO -     No more phones for project_id=2598928, stop pagination
+2026-02-09 23:20:04,717 - INFO -   Project 236/932 id=2598939 name='B1_мпп 3 carwinmotors.ru'
+2026-02-09 23:20:04,717 - INFO -     Fetching phones: project_id=2598939, page=1
+2026-02-09 23:20:06,421 - INFO -     Fetching phones: project_id=2598939, page=2
+2026-02-09 23:20:06,596 - INFO -     No more phones for project_id=2598939, stop pagination
+2026-02-09 23:20:06,601 - INFO -   Project 237/932 id=2598940 name='B2_мпп 3 carwinmotors.ru'
+2026-02-09 23:20:06,601 - INFO -     Fetching phones: project_id=2598940, page=1
+2026-02-09 23:20:08,689 - INFO -     Fetching phones: project_id=2598940, page=2
+2026-02-09 23:20:08,864 - INFO -     No more phones for project_id=2598940, stop pagination
+2026-02-09 23:20:08,868 - INFO -   Project 238/932 id=2598941 name='B3_мпп 3 carwinmotors.ru'
+2026-02-09 23:20:08,868 - INFO -     Fetching phones: project_id=2598941, page=1
+2026-02-09 23:20:10,709 - INFO -     Fetching phones: project_id=2598941, page=2
+2026-02-09 23:20:10,881 - INFO -     No more phones for project_id=2598941, stop pagination
+2026-02-09 23:20:10,885 - INFO -   Project 239/932 id=2599001 name='B1_нс 3 genzes.ru'
+2026-02-09 23:20:10,885 - INFO -     Fetching phones: project_id=2599001, page=1
+2026-02-09 23:20:11,778 - INFO -     Fetching phones: project_id=2599001, page=2
+2026-02-09 23:20:11,951 - INFO -     No more phones for project_id=2599001, stop pagination
+2026-02-09 23:20:11,955 - INFO -   Project 240/932 id=2599002 name='B2_нс 3 genzes.ru'
+2026-02-09 23:20:11,956 - INFO -     Fetching phones: project_id=2599002, page=1
+2026-02-09 23:20:14,719 - INFO -     Fetching phones: project_id=2599002, page=2
+2026-02-09 23:20:14,893 - INFO -     No more phones for project_id=2599002, stop pagination
+2026-02-09 23:20:14,897 - INFO -   Project 241/932 id=2599019 name='B1_мпп 3 genzes.ru'
+2026-02-09 23:20:14,897 - INFO -     Fetching phones: project_id=2599019, page=1
+2026-02-09 23:20:15,668 - INFO -     Fetching phones: project_id=2599019, page=2
+2026-02-09 23:20:15,841 - INFO -     No more phones for project_id=2599019, stop pagination
+2026-02-09 23:20:15,845 - INFO -   Project 242/932 id=2599020 name='B2_мпп 3 genzes.ru'
+2026-02-09 23:20:15,845 - INFO -     Fetching phones: project_id=2599020, page=1
+2026-02-09 23:20:16,544 - INFO -     Fetching phones: project_id=2599020, page=2
+2026-02-09 23:20:16,713 - INFO -     No more phones for project_id=2599020, stop pagination
+2026-02-09 23:20:16,716 - INFO -   Project 243/932 id=2599047 name='B2_мпп major-auto.ru'
+2026-02-09 23:20:16,718 - INFO -     Fetching phones: project_id=2599047, page=1
+2026-02-09 23:20:17,426 - INFO -     Fetching phones: project_id=2599047, page=2
+2026-02-09 23:20:17,601 - INFO -     No more phones for project_id=2599047, stop pagination
+2026-02-09 23:20:17,605 - INFO -   Project 244/932 id=2599048 name='B3_мпп major-auto.ru'
+2026-02-09 23:20:17,605 - INFO -     Fetching phones: project_id=2599048, page=1
+2026-02-09 23:20:18,320 - INFO -     Fetching phones: project_id=2599048, page=2
+2026-02-09 23:20:18,491 - INFO -     No more phones for project_id=2599048, stop pagination
+2026-02-09 23:20:18,495 - INFO -   Project 245/932 id=2599076 name='B2_нс 3 mb-i.ru'
+2026-02-09 23:20:18,495 - INFO -     Fetching phones: project_id=2599076, page=1
+2026-02-09 23:20:19,215 - INFO -     Fetching phones: project_id=2599076, page=2
+2026-02-09 23:20:19,386 - INFO -     No more phones for project_id=2599076, stop pagination
+2026-02-09 23:20:19,391 - INFO -   Project 246/932 id=2599077 name='B3_нс 3 mb-i.ru'
+2026-02-09 23:20:19,391 - INFO -     Fetching phones: project_id=2599077, page=1
+2026-02-09 23:20:20,132 - INFO -     Fetching phones: project_id=2599077, page=2
+2026-02-09 23:20:20,306 - INFO -     No more phones for project_id=2599077, stop pagination
+2026-02-09 23:20:20,310 - INFO -   Project 247/932 id=2599125 name='B2_мпп 3 mb-i.ru'
+2026-02-09 23:20:20,310 - INFO -     Fetching phones: project_id=2599125, page=1
+2026-02-09 23:20:21,001 - INFO -     Fetching phones: project_id=2599125, page=2
+2026-02-09 23:20:21,178 - INFO -     No more phones for project_id=2599125, stop pagination
+2026-02-09 23:20:21,183 - INFO -   Project 248/932 id=2599137 name='B1_мпп 4 mb-i.ru'
+2026-02-09 23:20:21,183 - INFO -     Fetching phones: project_id=2599137, page=1
+2026-02-09 23:20:23,178 - INFO -     Fetching phones: project_id=2599137, page=2
+2026-02-09 23:20:23,349 - INFO -     No more phones for project_id=2599137, stop pagination
+2026-02-09 23:20:23,353 - INFO -   Project 249/932 id=2599139 name='B3_мпп 4 mb-i.ru'
+2026-02-09 23:20:23,354 - INFO -     Fetching phones: project_id=2599139, page=1
+2026-02-09 23:20:24,917 - INFO -     Fetching phones: project_id=2599139, page=2
+2026-02-09 23:20:25,109 - INFO -     No more phones for project_id=2599139, stop pagination
+2026-02-09 23:20:25,112 - INFO -   Project 250/932 id=2599365 name='B2_мпп probeg-av.ru'
+2026-02-09 23:20:25,113 - INFO -     Fetching phones: project_id=2599365, page=1
+2026-02-09 23:20:27,893 - INFO -     Fetching phones: project_id=2599365, page=2
+2026-02-09 23:20:28,081 - INFO -     No more phones for project_id=2599365, stop pagination
+2026-02-09 23:20:28,084 - INFO -   Project 251/932 id=2599366 name='B3_мпп probeg-av.ru'
+2026-02-09 23:20:28,085 - INFO -     Fetching phones: project_id=2599366, page=1
+2026-02-09 23:20:31,171 - INFO -     Fetching phones: project_id=2599366, page=2
+2026-02-09 23:20:31,666 - INFO -     No more phones for project_id=2599366, stop pagination
+2026-02-09 23:20:31,670 - INFO -   Project 252/932 id=2599384 name='B3_нс 3 promo.kuntsevo-exeed.ru'
+2026-02-09 23:20:31,670 - INFO -     Fetching phones: project_id=2599384, page=1
+2026-02-09 23:20:32,363 - INFO -     Fetching phones: project_id=2599384, page=2
+2026-02-09 23:20:32,536 - INFO -     No more phones for project_id=2599384, stop pagination
+2026-02-09 23:20:32,540 - INFO -   Project 253/932 id=2599424 name='B1_мпп 2 rolf-probeg.ru'
+2026-02-09 23:20:32,541 - INFO -     Fetching phones: project_id=2599424, page=1
+2026-02-09 23:20:33,385 - INFO -     Fetching phones: project_id=2599424, page=2
+2026-02-09 23:20:33,555 - INFO -     No more phones for project_id=2599424, stop pagination
+2026-02-09 23:20:33,559 - INFO -   Project 254/932 id=2599430 name='B1_мпп 3 rolf-probeg.ru'
+2026-02-09 23:20:33,559 - INFO -     Fetching phones: project_id=2599430, page=1
+2026-02-09 23:20:34,319 - INFO -     Fetching phones: project_id=2599430, page=2
+2026-02-09 23:20:34,488 - INFO -     No more phones for project_id=2599430, stop pagination
+2026-02-09 23:20:34,492 - INFO -   Project 255/932 id=2599436 name='B2_нс 3 rolf.ru'
+2026-02-09 23:20:34,492 - INFO -     Fetching phones: project_id=2599436, page=1
+2026-02-09 23:20:35,267 - INFO -     Fetching phones: project_id=2599436, page=2
+2026-02-09 23:20:35,438 - INFO -     No more phones for project_id=2599436, stop pagination
+2026-02-09 23:20:35,442 - INFO -   Project 256/932 id=2599437 name='B3_нс 3 rolf.ru'
+2026-02-09 23:20:35,442 - INFO -     Fetching phones: project_id=2599437, page=1
+2026-02-09 23:20:36,203 - INFO -     Fetching phones: project_id=2599437, page=2
+2026-02-09 23:20:36,371 - INFO -     No more phones for project_id=2599437, stop pagination
+2026-02-09 23:20:36,375 - INFO -   Project 257/932 id=2599439 name='B2_нс 3 sale.omoda-avtoport.ru'
+2026-02-09 23:20:36,375 - INFO -     Fetching phones: project_id=2599439, page=1
+2026-02-09 23:20:37,057 - INFO -     Fetching phones: project_id=2599439, page=2
+2026-02-09 23:20:37,225 - INFO -     No more phones for project_id=2599439, stop pagination
+2026-02-09 23:20:37,228 - INFO -   Project 258/932 id=2599476 name='B1_мпп 2 varshavka91.ru'
+2026-02-09 23:20:37,229 - INFO -     Fetching phones: project_id=2599476, page=1
+2026-02-09 23:20:38,012 - INFO -     Fetching phones: project_id=2599476, page=2
+2026-02-09 23:20:38,183 - INFO -     No more phones for project_id=2599476, stop pagination
+2026-02-09 23:20:38,186 - INFO -   Project 259/932 id=2599477 name='B2_мпп 2 varshavka91.ru'
+2026-02-09 23:20:38,186 - INFO -     Fetching phones: project_id=2599477, page=1
+2026-02-09 23:20:38,947 - INFO -     Fetching phones: project_id=2599477, page=2
+2026-02-09 23:20:39,121 - INFO -     No more phones for project_id=2599477, stop pagination
+2026-02-09 23:20:39,125 - INFO -   Project 260/932 id=2599478 name='B3_мпп 2 varshavka91.ru'
+2026-02-09 23:20:39,125 - INFO -     Fetching phones: project_id=2599478, page=1
+2026-02-09 23:20:39,861 - INFO -     Fetching phones: project_id=2599478, page=2
+2026-02-09 23:20:40,032 - INFO -     No more phones for project_id=2599478, stop pagination
+2026-02-09 23:20:40,037 - INFO -   Project 261/932 id=2599509 name='B1_мпп 2 www.avtogermes.ru'
+2026-02-09 23:20:40,037 - INFO -     Fetching phones: project_id=2599509, page=1
+2026-02-09 23:20:40,874 - INFO -     Fetching phones: project_id=2599509, page=2
+2026-02-09 23:20:41,042 - INFO -     No more phones for project_id=2599509, stop pagination
+2026-02-09 23:20:41,047 - INFO -   Project 262/932 id=2599524 name='B2_нс youauto.ru'
+2026-02-09 23:20:41,047 - INFO -     Fetching phones: project_id=2599524, page=1
+2026-02-09 23:20:42,349 - INFO -     Fetching phones: project_id=2599524, page=2
+2026-02-09 23:20:42,523 - INFO -     No more phones for project_id=2599524, stop pagination
+2026-02-09 23:20:42,527 - INFO -   Project 263/932 id=2742855 name='B1_нс нов youauto.ru'
+2026-02-09 23:20:42,527 - INFO -     Fetching phones: project_id=2742855, page=1
+2026-02-09 23:20:43,222 - INFO -     Fetching phones: project_id=2742855, page=2
+2026-02-09 23:20:43,402 - INFO -     No more phones for project_id=2742855, stop pagination
+2026-02-09 23:20:43,405 - INFO -   Project 264/932 id=2742857 name='B3_нс нов youauto.ru'
+2026-02-09 23:20:43,405 - INFO -     Fetching phones: project_id=2742857, page=1
+2026-02-09 23:20:44,158 - INFO -     Fetching phones: project_id=2742857, page=2
+2026-02-09 23:20:44,326 - INFO -     No more phones for project_id=2742857, stop pagination
+2026-02-09 23:20:44,330 - INFO -   Project 265/932 id=2742860 name='B1_мпп youauto.ru'
+2026-02-09 23:20:44,330 - INFO -     Fetching phones: project_id=2742860, page=1
+2026-02-09 23:20:51,768 - INFO -     Fetching phones: project_id=2742860, page=2
+2026-02-09 23:21:11,035 - INFO - Retrieved 2411 clients
+2026-02-09 23:21:11,036 - INFO - Starting collection for 1 clients (run_id=1, limit_projects=50, max_pages=None)
+2026-02-09 23:21:11,036 - INFO - [1/1] Processing client d.avtosalon (id=124872)
+2026-02-09 23:21:11,334 - INFO -   Client d.avtosalon: 50 projects to process
+2026-02-09 23:21:11,839 - INFO -   Project 1/50 id=1753788 name='B1_нс carro.ru ПАРТНЕР ПРОСИЛ УБРАТЬ'
+2026-02-09 23:21:11,839 - INFO -     Fetching phones: project_id=1753788, page=1
+2026-02-09 23:21:12,530 - INFO -     Fetching phones: project_id=1753788, page=2
+2026-02-09 23:21:12,705 - INFO -     No more phones for project_id=1753788, stop pagination
+2026-02-09 23:21:12,719 - INFO -   Project 2/50 id=1753789 name='B2_нс carro.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:21:12,719 - INFO -     Fetching phones: project_id=1753789, page=1
+2026-02-09 23:21:13,468 - INFO -     Fetching phones: project_id=1753789, page=2
+2026-02-09 23:21:13,639 - INFO -     No more phones for project_id=1753789, stop pagination
+2026-02-09 23:21:13,642 - INFO -   Project 3/50 id=1753790 name='B3_нс carro.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:21:13,642 - INFO -     Fetching phones: project_id=1753790, page=1
+2026-02-09 23:21:14,352 - INFO -     Fetching phones: project_id=1753790, page=2
+2026-02-09 23:21:14,521 - INFO -     No more phones for project_id=1753790, stop pagination
+2026-02-09 23:21:14,525 - INFO -   Project 4/50 id=1753796 name='B3_нс azimut-cars.ru ПАРТНЕР ПРОСИЛ УБРАТЬ'
+2026-02-09 23:21:14,525 - INFO -     Fetching phones: project_id=1753796, page=1
+2026-02-09 23:21:15,234 - INFO -     Fetching phones: project_id=1753796, page=2
+2026-02-09 23:21:15,413 - INFO -     No more phones for project_id=1753796, stop pagination
+2026-02-09 23:21:15,416 - INFO -   Project 5/50 id=1753799 name='B3_нс atlas-dealer.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:21:15,416 - INFO -     Fetching phones: project_id=1753799, page=1
+2026-02-09 23:21:16,489 - INFO -     Fetching phones: project_id=1753799, page=2
+2026-02-09 23:21:16,661 - INFO -     No more phones for project_id=1753799, stop pagination
+2026-02-09 23:21:16,665 - INFO -   Project 6/50 id=1753832 name='B1_мпп varshavka91.ru'
+2026-02-09 23:21:16,665 - INFO -     Fetching phones: project_id=1753832, page=1
+2026-02-09 23:21:23,486 - INFO -     Fetching phones: project_id=1753832, page=2
+2026-02-09 23:21:27,268 - INFO - Stop requested by user
+2026-02-09 23:21:30,174 - INFO -     Fetching phones: project_id=1753832, page=3
+2026-02-09 23:21:36,933 - INFO -     Fetching phones: project_id=1753832, page=4
+2026-02-09 23:21:37,106 - INFO -     No more phones for project_id=1753832, stop pagination
+2026-02-09 23:21:37,111 - INFO -   Project 7/50 id=1753833 name='B3_мпп varshavka91.ru'
+2026-02-09 23:21:37,111 - INFO -     Fetching phones: project_id=1753833, page=1
+2026-02-09 23:21:44,693 - INFO -     Fetching phones: project_id=1753833, page=2
+2026-02-09 23:21:52,196 - INFO -     Fetching phones: project_id=1753833, page=3
+2026-02-09 23:21:57,313 - INFO -     Fetching phones: project_id=1753833, page=4
+2026-02-09 23:21:57,484 - INFO -     No more phones for project_id=1753833, stop pagination
+2026-02-09 23:21:57,489 - INFO -   Project 8/50 id=1753844 name='B2_нс varshavka91.ru'
+2026-02-09 23:21:57,489 - INFO -     Fetching phones: project_id=1753844, page=1
+2026-02-09 23:21:58,398 - INFO -     Fetching phones: project_id=1753844, page=2
+2026-02-09 23:21:58,568 - INFO -     No more phones for project_id=1753844, stop pagination
+2026-02-09 23:21:58,573 - INFO -   Project 9/50 id=1753845 name='B3_нс varshavka91.ru'
+2026-02-09 23:21:58,582 - INFO -     Fetching phones: project_id=1753845, page=1
+2026-02-09 23:21:59,393 - INFO -     Fetching phones: project_id=1753845, page=2
+2026-02-09 23:21:59,563 - INFO -     No more phones for project_id=1753845, stop pagination
+2026-02-09 23:21:59,568 - INFO -   Project 10/50 id=1753851 name='B1_нс www.avtogermes.ru ПАРТНЕР ПРОСИЛ УБРАТЬ'
+2026-02-09 23:21:59,571 - INFO -     Fetching phones: project_id=1753851, page=1
+2026-02-09 23:22:00,571 - INFO -     Fetching phones: project_id=1753851, page=2
+2026-02-09 23:22:00,742 - INFO -     No more phones for project_id=1753851, stop pagination
+2026-02-09 23:22:00,746 - INFO -   Project 11/50 id=1753872 name='B1_нс freshauto.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:22:00,746 - INFO -     Fetching phones: project_id=1753872, page=1
+2026-02-09 23:22:01,479 - INFO -     Fetching phones: project_id=1753872, page=2
+2026-02-09 23:22:01,647 - INFO -     No more phones for project_id=1753872, stop pagination
+2026-02-09 23:22:01,651 - INFO -   Project 12/50 id=1753886 name='B1_нс www.major-expert.ru'
+2026-02-09 23:22:01,655 - INFO -     Fetching phones: project_id=1753886, page=1
+2026-02-09 23:22:02,395 - INFO -     Fetching phones: project_id=1753886, page=2
+2026-02-09 23:22:02,568 - INFO -     No more phones for project_id=1753886, stop pagination
+2026-02-09 23:22:02,572 - INFO -   Project 13/50 id=1753887 name='B2_нс www.major-expert.ru'
+2026-02-09 23:22:02,572 - INFO -     Fetching phones: project_id=1753887, page=1
+2026-02-09 23:22:03,420 - INFO -     Fetching phones: project_id=1753887, page=2
+2026-02-09 23:22:03,596 - INFO -     No more phones for project_id=1753887, stop pagination
+2026-02-09 23:22:03,600 - INFO -   Project 14/50 id=1753896 name='B3_нс 2 www.major-expert.ru'
+2026-02-09 23:22:03,600 - INFO -     Fetching phones: project_id=1753896, page=1
+2026-02-09 23:22:04,644 - INFO -     Fetching phones: project_id=1753896, page=2
+2026-02-09 23:22:04,816 - INFO -     No more phones for project_id=1753896, stop pagination
+2026-02-09 23:22:04,819 - INFO -   Project 15/50 id=1753904 name='B2_мпп www.major-expert.ru'
+2026-02-09 23:22:04,821 - INFO -     Fetching phones: project_id=1753904, page=1
+2026-02-09 23:22:06,003 - INFO -     Fetching phones: project_id=1753904, page=2
+2026-02-09 23:22:06,174 - INFO -     No more phones for project_id=1753904, stop pagination
+2026-02-09 23:22:06,178 - INFO -   Project 16/50 id=1753909 name='B1_нс kia-favorit.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:22:06,178 - INFO -     Fetching phones: project_id=1753909, page=1
+2026-02-09 23:22:06,993 - INFO -     Fetching phones: project_id=1753909, page=2
+2026-02-09 23:22:07,165 - INFO -     No more phones for project_id=1753909, stop pagination
+2026-02-09 23:22:07,169 - INFO -   Project 17/50 id=1753921 name='B1_нс кросс-авто.рф'
+2026-02-09 23:22:07,169 - INFO -     Fetching phones: project_id=1753921, page=1
+2026-02-09 23:22:07,856 - INFO -     Fetching phones: project_id=1753921, page=2
+2026-02-09 23:22:08,028 - INFO -     No more phones for project_id=1753921, stop pagination
+2026-02-09 23:22:08,031 - INFO -   Project 18/50 id=1753931 name='B2_нсо кросс-авто.рф'
+2026-02-09 23:22:08,032 - INFO -     Fetching phones: project_id=1753931, page=1
+2026-02-09 23:22:08,768 - INFO -     Fetching phones: project_id=1753931, page=2
+2026-02-09 23:22:08,936 - INFO -     No more phones for project_id=1753931, stop pagination
+2026-02-09 23:22:08,940 - INFO -   Project 19/50 id=1753932 name='B3_нсо кросс-авто.рф'
+2026-02-09 23:22:08,942 - INFO -     Fetching phones: project_id=1753932, page=1
+2026-02-09 23:22:09,666 - INFO -     Fetching phones: project_id=1753932, page=2
+2026-02-09 23:22:09,835 - INFO -     No more phones for project_id=1753932, stop pagination
+2026-02-09 23:22:09,839 - INFO -   Project 20/50 id=1753938 name='B3_нс прайм-дилер.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:22:09,839 - INFO -     Fetching phones: project_id=1753938, page=1
+2026-02-09 23:22:17,491 - INFO -     Fetching phones: project_id=1753938, page=2
+2026-02-09 23:22:19,297 - INFO -     Fetching phones: project_id=1753938, page=3
+2026-02-09 23:22:19,475 - INFO -     No more phones for project_id=1753938, stop pagination
+2026-02-09 23:22:19,480 - INFO -   Project 21/50 id=1753944 name='B1_мпп прайм-дилер.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:22:19,480 - INFO -     Fetching phones: project_id=1753944, page=1
+2026-02-09 23:22:21,086 - INFO -     Fetching phones: project_id=1753944, page=2
+2026-02-09 23:22:21,256 - INFO -     No more phones for project_id=1753944, stop pagination
+2026-02-09 23:22:21,260 - INFO -   Project 22/50 id=1753945 name='B2_мпп прайм-дилер.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:22:21,260 - INFO -     Fetching phones: project_id=1753945, page=1
+2026-02-09 23:22:22,706 - INFO -     Fetching phones: project_id=1753945, page=2
+2026-02-09 23:22:22,881 - INFO -     No more phones for project_id=1753945, stop pagination
+2026-02-09 23:22:22,884 - INFO -   Project 23/50 id=1753954 name='B1_нс 2 msk-auto-dealer.ru'
+2026-02-09 23:22:22,887 - INFO -     Fetching phones: project_id=1753954, page=1
+2026-02-09 23:22:25,160 - INFO -     Fetching phones: project_id=1753954, page=2
+2026-02-09 23:22:25,347 - INFO -     No more phones for project_id=1753954, stop pagination
+2026-02-09 23:22:25,351 - INFO -   Project 24/50 id=1753956 name='B3_нс 2 msk-auto-dealer.ru'
+2026-02-09 23:22:25,351 - INFO -     Fetching phones: project_id=1753956, page=1
+2026-02-09 23:22:27,377 - INFO -     Fetching phones: project_id=1753956, page=2
+2026-02-09 23:22:27,552 - INFO -     No more phones for project_id=1753956, stop pagination
+2026-02-09 23:22:27,556 - INFO -   Project 25/50 id=1753967 name='B1_нс rolf-probeg.ru'
+2026-02-09 23:22:27,556 - INFO -     Fetching phones: project_id=1753967, page=1
+2026-02-09 23:22:28,325 - INFO -     Fetching phones: project_id=1753967, page=2
+2026-02-09 23:22:28,497 - INFO -     No more phones for project_id=1753967, stop pagination
+2026-02-09 23:22:28,501 - INFO -   Project 26/50 id=1753977 name='B1_нс автоград-м.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:22:28,501 - INFO -     Fetching phones: project_id=1753977, page=1
+2026-02-09 23:22:29,211 - INFO -     Fetching phones: project_id=1753977, page=2
+2026-02-09 23:22:29,385 - INFO -     No more phones for project_id=1753977, stop pagination
+2026-02-09 23:22:29,390 - INFO -   Project 27/50 id=1753978 name='B3_нс автоград-м.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:22:29,390 - INFO -     Fetching phones: project_id=1753978, page=1
+2026-02-09 23:22:30,264 - INFO -     Fetching phones: project_id=1753978, page=2
+2026-02-09 23:22:30,437 - INFO -     No more phones for project_id=1753978, stop pagination
+2026-02-09 23:22:30,440 - INFO -   Project 28/50 id=1753989 name='B3_нс 2 автоград-м.рф ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:22:30,440 - INFO -     Fetching phones: project_id=1753989, page=1
+2026-02-09 23:22:31,680 - INFO -     Fetching phones: project_id=1753989, page=2
+2026-02-09 23:22:31,854 - INFO -     No more phones for project_id=1753989, stop pagination
+2026-02-09 23:22:31,858 - INFO -   Project 29/50 id=1753998 name='B1_нс probeg-av.ru'
+2026-02-09 23:22:31,858 - INFO -     Fetching phones: project_id=1753998, page=1
+2026-02-09 23:22:32,595 - INFO -     Fetching phones: project_id=1753998, page=2
+2026-02-09 23:22:32,766 - INFO -     No more phones for project_id=1753998, stop pagination
+2026-02-09 23:22:32,769 - INFO -   Project 30/50 id=1753999 name='B3_нс probeg-av.ru'
+2026-02-09 23:22:32,769 - INFO -     Fetching phones: project_id=1753999, page=1
+2026-02-09 23:22:33,634 - INFO -     Fetching phones: project_id=1753999, page=2
+2026-02-09 23:22:33,801 - INFO -     No more phones for project_id=1753999, stop pagination
+2026-02-09 23:22:33,805 - INFO -   Project 31/50 id=1754025 name='B1_нс 2 probeg-av.ru'
+2026-02-09 23:22:33,805 - INFO -     Fetching phones: project_id=1754025, page=1
+2026-02-09 23:22:34,488 - INFO -     Fetching phones: project_id=1754025, page=2
+2026-02-09 23:22:34,660 - INFO -     No more phones for project_id=1754025, stop pagination
+2026-02-09 23:22:34,663 - INFO -   Project 32/50 id=1754030 name='B2_нс avantaauto.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:22:34,663 - INFO -     Fetching phones: project_id=1754030, page=1
+2026-02-09 23:22:35,471 - INFO -     Fetching phones: project_id=1754030, page=2
+2026-02-09 23:22:35,640 - INFO -     No more phones for project_id=1754030, stop pagination
+2026-02-09 23:22:35,644 - INFO -   Project 33/50 id=1754031 name='B3_нс avantaauto.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:22:35,644 - INFO -     Fetching phones: project_id=1754031, page=1
+2026-02-09 23:22:36,553 - INFO -     Fetching phones: project_id=1754031, page=2
+2026-02-09 23:22:36,722 - INFO -     No more phones for project_id=1754031, stop pagination
+2026-02-09 23:22:36,726 - INFO -   Project 34/50 id=1754122 name='B1_нс avanta-avto-credit.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:22:36,727 - INFO -     Fetching phones: project_id=1754122, page=1
+2026-02-09 23:22:37,435 - INFO -     Fetching phones: project_id=1754122, page=2
+2026-02-09 23:22:37,603 - INFO -     No more phones for project_id=1754122, stop pagination
+2026-02-09 23:22:37,607 - INFO -   Project 35/50 id=1754124 name='B3_нс avanta-avto-credit.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:22:37,607 - INFO -     Fetching phones: project_id=1754124, page=1
+2026-02-09 23:22:38,525 - INFO -     Fetching phones: project_id=1754124, page=2
+2026-02-09 23:22:38,694 - INFO -     No more phones for project_id=1754124, stop pagination
+2026-02-09 23:22:38,697 - INFO -   Project 36/50 id=1754131 name='B1_нсо avanta-avto-credit.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:22:38,697 - INFO -     Fetching phones: project_id=1754131, page=1
+2026-02-09 23:22:39,387 - INFO -     Fetching phones: project_id=1754131, page=2
+2026-02-09 23:22:39,555 - INFO -     No more phones for project_id=1754131, stop pagination
+2026-02-09 23:22:39,559 - INFO -   Project 37/50 id=1754132 name='B3_нсо avanta-avto-credit.ru'
+2026-02-09 23:22:39,559 - INFO -     Fetching phones: project_id=1754132, page=1
+2026-02-09 23:22:40,578 - INFO -     Fetching phones: project_id=1754132, page=2
+2026-02-09 23:22:40,748 - INFO -     No more phones for project_id=1754132, stop pagination
+2026-02-09 23:22:40,751 - INFO -   Project 38/50 id=1754134 name='B2_мпп avanta-avto-credit.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:22:40,751 - INFO -     Fetching phones: project_id=1754134, page=1
+2026-02-09 23:22:41,723 - INFO -     Fetching phones: project_id=1754134, page=2
+2026-02-09 23:22:41,891 - INFO -     No more phones for project_id=1754134, stop pagination
+2026-02-09 23:22:41,895 - INFO -   Project 39/50 id=1754135 name='B3_мпп avanta-avto-credit.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:22:41,895 - INFO -     Fetching phones: project_id=1754135, page=1
+2026-02-09 23:22:42,788 - INFO -     Fetching phones: project_id=1754135, page=2
+2026-02-09 23:22:42,960 - INFO -     No more phones for project_id=1754135, stop pagination
+2026-02-09 23:22:42,964 - INFO -   Project 40/50 id=1754147 name='B3_нс genzes.ru'
+2026-02-09 23:22:42,964 - INFO -     Fetching phones: project_id=1754147, page=1
+2026-02-09 23:22:43,750 - INFO -     Fetching phones: project_id=1754147, page=2
+2026-02-09 23:22:43,918 - INFO -     No more phones for project_id=1754147, stop pagination
+2026-02-09 23:22:43,923 - INFO -   Project 41/50 id=1754156 name='B1_нс carwinmotors.ru'
+2026-02-09 23:22:43,923 - INFO -     Fetching phones: project_id=1754156, page=1
+2026-02-09 23:22:44,734 - INFO -     Fetching phones: project_id=1754156, page=2
+2026-02-09 23:22:44,902 - INFO -     No more phones for project_id=1754156, stop pagination
+2026-02-09 23:22:44,907 - INFO -   Project 42/50 id=1754157 name='B2_нс carwinmotors.ru'
+2026-02-09 23:22:44,907 - INFO -     Fetching phones: project_id=1754157, page=1
+2026-02-09 23:22:46,084 - INFO -     Fetching phones: project_id=1754157, page=2
+2026-02-09 23:22:46,254 - INFO -     No more phones for project_id=1754157, stop pagination
+2026-02-09 23:22:46,257 - INFO -   Project 43/50 id=1754158 name='B3_нс carwinmotors.ru'
+2026-02-09 23:22:46,257 - INFO -     Fetching phones: project_id=1754158, page=1
+2026-02-09 23:22:47,557 - INFO -     Fetching phones: project_id=1754158, page=2
+2026-02-09 23:22:47,727 - INFO -     No more phones for project_id=1754158, stop pagination
+2026-02-09 23:22:47,730 - INFO -   Project 44/50 id=1754166 name='B3_нс masmotors.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:22:47,730 - INFO -     Fetching phones: project_id=1754166, page=1
+2026-02-09 23:22:49,122 - INFO -     Fetching phones: project_id=1754166, page=2
+2026-02-09 23:22:49,290 - INFO -     No more phones for project_id=1754166, stop pagination
+2026-02-09 23:22:49,294 - INFO -   Project 45/50 id=1754170 name='B3_нс nzvsmst.ru'
+2026-02-09 23:22:49,295 - INFO -     Fetching phones: project_id=1754170, page=1
+2026-02-09 23:22:50,127 - INFO -     Fetching phones: project_id=1754170, page=2
+2026-02-09 23:22:50,296 - INFO -     No more phones for project_id=1754170, stop pagination
+2026-02-09 23:22:50,300 - INFO -   Project 46/50 id=1754201 name='B2_нс 2 avantaauto.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:22:50,300 - INFO -     Fetching phones: project_id=1754201, page=1
+2026-02-09 23:22:50,992 - INFO -     Fetching phones: project_id=1754201, page=2
+2026-02-09 23:22:51,160 - INFO -     No more phones for project_id=1754201, stop pagination
+2026-02-09 23:22:51,163 - INFO -   Project 47/50 id=1754202 name='B3_нс 2 avantaauto.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:22:51,164 - INFO -     Fetching phones: project_id=1754202, page=1
+2026-02-09 23:22:51,886 - INFO -     Fetching phones: project_id=1754202, page=2
+2026-02-09 23:22:52,052 - INFO -     No more phones for project_id=1754202, stop pagination
+2026-02-09 23:22:52,057 - INFO -   Project 48/50 id=1754256 name='B3_нс  avanta-avto.ru ПАРТНЕР ПРОСИЛ УБРАТЬ '
+2026-02-09 23:22:52,057 - INFO -     Fetching phones: project_id=1754256, page=1
+2026-02-09 23:22:53,800 - INFO -     Fetching phones: project_id=1754256, page=2
+2026-02-09 23:22:53,968 - INFO -     No more phones for project_id=1754256, stop pagination
+2026-02-09 23:22:53,971 - INFO -   Project 49/50 id=1754261 name='B2_нс vogue-motors.com'
+2026-02-09 23:22:53,972 - INFO -     Fetching phones: project_id=1754261, page=1
+2026-02-09 23:22:54,675 - INFO -     Fetching phones: project_id=1754261, page=2
+2026-02-09 23:22:54,845 - INFO -     No more phones for project_id=1754261, stop pagination
+2026-02-09 23:22:54,848 - INFO -   Project 50/50 id=1754262 name='B3_нс vogue-motors.com'
+2026-02-09 23:22:54,849 - INFO -     Fetching phones: project_id=1754262, page=1
+2026-02-09 23:22:55,580 - INFO -     Fetching phones: project_id=1754262, page=2
+2026-02-09 23:22:55,750 - INFO -     No more phones for project_id=1754262, stop pagination
+2026-02-09 23:22:55,755 - INFO - Collection completed: {'total_phones': 8749, 'new_phones': 8541, 'errors': 0}

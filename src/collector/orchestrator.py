@@ -8,6 +8,7 @@ from src.collector.normalizer import PhoneNormalizer
 
 logger = logging.getLogger(__name__)
 
+
 class CollectionOrchestrator:
     def __init__(self, api_client, db, rate_limit: float = 0.5, state_manager: StateManager = None):
         self.api = api_client
@@ -22,6 +23,8 @@ class CollectionOrchestrator:
         limit_projects: int | None = None,
         max_pages: int | None = None,
         resume: bool = False,
+        stop_callback=None,  # ← НОВОЕ
+        progress_callback=None,  # ← НОВОЕ
     ):
         # Если resume, пытаемся загрузить состояние
         processed_client_ids = set()
@@ -42,25 +45,45 @@ class CollectionOrchestrator:
             stats = {'total_phones': 0, 'new_phones': 0, 'errors': 0}
 
         try:
-            clients = self.api.get_clients()
+            # Загружаем клиентов ОДИН РАЗ
+            all_clients_list = self.api.get_clients()
+            total_clients_original = len(all_clients_list)
+            
             if limit_clients:
-                clients = clients[:limit_clients]
+                all_clients_list = all_clients_list[:limit_clients]
 
             # Фильтруем уже обработанных клиентов
             if processed_client_ids:
-                clients = [c for c in clients if c.id not in processed_client_ids]
+                all_clients_list = [c for c in all_clients_list if c.id not in processed_client_ids]
                 logger.info(f"Skipped {len(processed_client_ids)} already processed clients")
 
-            total_clients = len(clients)
+            total_clients = len(all_clients_list)
             logger.info(
                 f"Starting collection for {total_clients} clients "
                 f"(run_id={run_id}, limit_projects={limit_projects}, max_pages={max_pages})"
             )
 
-            for idx, client in enumerate(clients, 1):
+            for idx, client in enumerate(all_clients_list, 1):
+                # ← НОВОЕ: Проверка на остановку
+                if stop_callback and stop_callback():
+                    logger.info("Collection stopped by user (via callback)")
+                    self.state_manager.save(
+                        run_id=run_id,
+                        total_clients=total_clients_original,
+                        processed_clients=len(processed_client_ids),
+                        processed_client_ids=processed_client_ids,
+                        stats=stats
+                    )
+                    self.db.update_run_stats(run_id, stats['total_phones'], stats['new_phones'], 'stopped', stats['errors'])
+                    return  # ← Прерываем цикл
+
                 try:
                     logger.info(f"[{idx}/{total_clients}] Processing client {client.username} (id={client.id})")
                     self.db.insert_client(client.id, client.username)
+
+                    # ← НОВОЕ: Обновление прогресса
+                    if progress_callback:
+                        progress_callback(idx, total_clients, stats)
 
                     projects = self.api.get_projects(client.id)
                     if limit_projects:
@@ -78,6 +101,11 @@ class CollectionOrchestrator:
                         )
                         page = 1
                         while True:
+                            # ← НОВОЕ: Проверка на остановку внутри пагинации
+                            if stop_callback and stop_callback():
+                                logger.info("Collection stopped during pagination")
+                                raise KeyboardInterrupt  # Выходим через exception
+
                             if max_pages and page > max_pages:
                                 logger.info(
                                     f"    Reached max_pages={max_pages} for project_id={project.id}"
@@ -119,7 +147,7 @@ class CollectionOrchestrator:
                     if idx % 5 == 0:
                         self.state_manager.save(
                             run_id=run_id,
-                            total_clients=len(self.api.get_clients()) if not limit_clients else limit_clients,
+                            total_clients=total_clients_original,
                             processed_clients=len(processed_client_ids),
                             processed_client_ids=processed_client_ids,
                             stats=stats
@@ -141,7 +169,7 @@ class CollectionOrchestrator:
             # Сохраняем state перед выходом
             self.state_manager.save(
                 run_id=run_id,
-                total_clients=len(self.api.get_clients()) if not limit_clients else limit_clients,
+                total_clients=total_clients_original,
                 processed_clients=len(processed_client_ids),
                 processed_client_ids=processed_client_ids,
                 stats=stats

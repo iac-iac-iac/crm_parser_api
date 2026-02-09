@@ -3,13 +3,16 @@ import requests
 import logging
 from typing import List, Dict
 from dataclasses import dataclass
+from src.utils.retry import retry
 
 logger = logging.getLogger(__name__)
+
 
 @dataclass
 class Client:
     id: int
     username: str
+
 
 @dataclass
 class Project:
@@ -17,24 +20,43 @@ class Project:
     name: str
     client_id: int
 
+
 @dataclass
 class PhoneRecord:
     phone: str
     created_at: str
 
+
 class DataMasterAPIError(Exception):
     pass
 
+
 class DataMasterClient:
-    def __init__(self, api_url: str, token: str, timeout: int = 30):
+    def __init__(self, api_url: str, token: str, timeout: int = 30, max_retries: int = 3):
         self.api_url = api_url
         self.token = token
         self.timeout = timeout
+        self.max_retries = max_retries
         self.session = requests.Session()
         self.session.headers.update({'Content-Type': 'application/json'})
 
+    @retry(max_attempts=3, delay=2.0, backoff=2.0, exceptions=(requests.exceptions.RequestException,))
     def _make_request(self, command: str, **params) -> Dict:
+        """
+        Выполнить API-запрос с автоматическими повторами при сбоях.
+        
+        Args:
+            command: Команда API (clients, gck_projects, gck_phones)
+            **params: Дополнительные параметры запроса
+            
+        Returns:
+            Dict с результатом API
+            
+        Raises:
+            DataMasterAPIError: При ошибке API или превышении лимита попыток
+        """
         payload = {'token': self.token, 'command': command, **params}
+        
         try:
             response = self.session.post(self.api_url, json=payload, timeout=self.timeout)
             response.raise_for_status()
@@ -44,8 +66,19 @@ class DataMasterClient:
                 raise DataMasterAPIError(f"API error: {result.get('error', 'Unknown')}")
             
             return result
+            
+        except requests.exceptions.Timeout as e:
+            logger.error(f"Request timeout after {self.timeout}s: {e}")
+            raise
+        except requests.exceptions.ConnectionError as e:
+            logger.error(f"Connection error: {e}")
+            raise
+        except requests.exceptions.HTTPError as e:
+            logger.error(f"HTTP error {e.response.status_code}: {e}")
+            raise
         except requests.exceptions.RequestException as e:
-            raise DataMasterAPIError(f"Request failed: {e}")
+            logger.error(f"Request failed: {e}")
+            raise
 
     def get_clients(self) -> List[Client]:
         result = self._make_request('clients')

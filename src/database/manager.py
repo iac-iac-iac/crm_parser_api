@@ -4,6 +4,7 @@ import os
 from typing import Optional, Dict
 from contextlib import contextmanager
 
+
 class DatabaseManager:
     def __init__(self, db_path: str):
         self.db_path = db_path
@@ -60,19 +61,12 @@ class DatabaseManager:
                 (client_id, username)
             )
 
-    def update_run_stats(self, run_id: int, total_phones: int, new_phones: int, status: str = 'completed'):
-        with self.get_cursor() as cursor:
-            cursor.execute(
-                """UPDATE runs SET total_phones = ?, new_phones = ?, 
-                   status = ?, completed_at = CURRENT_TIMESTAMP WHERE id = ?""",
-                (total_phones, new_phones, status, run_id)
-            )
     def insert_project(self, project_id: int, name: str, client_id: int):
         with self.get_cursor() as cursor:
             cursor.execute(
-            "INSERT OR IGNORE INTO projects (id, name, client_id) VALUES (?, ?, ?)",
-            (project_id, name, client_id)
-        )
+                "INSERT OR IGNORE INTO projects (id, name, client_id) VALUES (?, ?, ?)",
+                (project_id, name, client_id)
+            )
 
     def insert_project_phone(self, project_id: int, phone_id: int, run_id: int, created_at: str):
         with self.get_cursor() as cursor:
@@ -85,6 +79,6 @@ class DatabaseManager:
         with self.get_cursor() as cursor:
             cursor.execute(
                 """UPDATE runs SET total_phones = ?, new_phones = ?, errors_count = ?,
-                status = ?, completed_at = CURRENT_TIMESTAMP WHERE id = ?""",
+                   status = ?, completed_at = CURRENT_TIMESTAMP WHERE id = ?""",
                 (total_phones, new_phones, errors_count, status, run_id)
             )
