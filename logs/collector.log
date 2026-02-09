@@ -1,0 +1,30 @@
+2026-02-09 19:51:47,593 - __main__ - INFO - Starting collection (limit=3)
+2026-02-09 19:51:48,145 - src.api.client - INFO - Retrieved 2411 clients
+2026-02-09 19:51:48,145 - src.collector.orchestrator - INFO - Starting collection for 3 clients (run_id=1)
+2026-02-09 19:51:48,145 - src.collector.orchestrator - INFO - [1/3] Processing client d.avtosalon
+2026-02-09 19:51:50,047 - __main__ - WARNING - Collection stopped by user
+2026-02-09 19:53:11,031 - __main__ - INFO - Starting collection (limit=3)
+2026-02-09 19:53:11,551 - src.api.client - INFO - Retrieved 2411 clients
+2026-02-09 19:53:11,551 - src.collector.orchestrator - INFO - Starting collection for 3 clients (run_id=2)
+2026-02-09 19:53:11,551 - src.collector.orchestrator - INFO - [1/3] Processing client d.avtosalon
+2026-02-09 19:53:42,410 - __main__ - INFO - Starting collection (limit=3)
+2026-02-09 19:53:43,051 - src.api.client - INFO - Retrieved 2411 clients
+2026-02-09 19:53:43,051 - src.collector.orchestrator - INFO - Starting collection for 3 clients (run_id=3)
+2026-02-09 19:53:43,052 - src.collector.orchestrator - INFO - [1/3] Processing client d.avtosalon
+2026-02-09 20:08:47,519 - src.collector.orchestrator - INFO - [2/3] Processing client tist
+2026-02-09 20:08:48,118 - src.collector.orchestrator - INFO - [3/3] Processing client d.avtosalon2
+2026-02-09 20:24:59,780 - src.collector.orchestrator - INFO - Collection completed: {'total_phones': 111387, 'new_phones': 93970, 'errors': 0}
+2026-02-09 20:24:59,781 - __main__ - INFO - ✅ Collection completed successfully
+2026-02-09 20:58:22,652 - __main__ - INFO - Starting export: all
+2026-02-09 20:58:22,652 - __main__ - ERROR - ❌ Export failed: no such column: last_seen_at
+2026-02-09 21:06:43,297 - __main__ - INFO - Starting collection (limit_clients=1, limit_projects=2, max_pages=1)
+2026-02-09 21:06:43,816 - src.api.client - INFO - Retrieved 2411 clients
+2026-02-09 21:06:43,816 - src.collector.orchestrator - INFO - Starting collection for 1 clients (run_id=1, limit_projects=2, max_pages=1)
+2026-02-09 21:06:43,816 - src.collector.orchestrator - INFO - [1/1] Processing client d.avtosalon
+2026-02-09 21:06:43,818 - src.collector.orchestrator - ERROR - Error processing client 124872: no such table: clients
+2026-02-09 21:06:43,821 - src.collector.orchestrator - INFO - Collection completed: {'total_phones': 0, 'new_phones': 0, 'errors': 1}
+2026-02-09 21:06:43,824 - __main__ - INFO - ✅ Collection completed successfully
+2026-02-09 21:06:57,980 - __main__ - INFO - Starting export: all
+2026-02-09 21:06:57,980 - __main__ - ERROR - ❌ Export failed: no such table: phones
+2026-02-09 21:13:09,550 - __main__ - INFO - Starting export: runs
+2026-02-09 21:13:09,553 - __main__ - INFO - ✅ Exported runs summary: data/exports\runs_summary_20260209_211309.csv
