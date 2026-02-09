@@ -25,13 +25,20 @@ class TextHandler(logging.Handler):
     def emit(self, record):
         msg = self.format(record)
         def append():
-            self.text_widget.configure(state='normal')
-            self.text_widget.insert('end', msg + '
+            try:
+                self.text_widget.configure(state='normal')
+                self.text_widget.insert('end', msg + '
 ')
-            self.text_widget.see('end')
-            self.text_widget.configure(state='disabled')
+                self.text_widget.see('end')
+                self.text_widget.configure(state='disabled')
+            except Exception:
+                pass
         
-        self.text_widget.after(0, append)
+        # Используем after для потокобезопасности
+        try:
+            self.text_widget.after(0, append)
+        except Exception:
+            pass
 
 class App(ctk.CTk):
     def __init__(self):
@@ -50,7 +57,6 @@ class App(ctk.CTk):
         # Состояние
         self.collection_thread = None
         self.is_collecting = False
-        self.stats = {'total_phones': 0, 'new_phones': 0, 'errors': 0}
 
         # Настройка окна
         self.title("DataMaster Phone Collector")
@@ -68,7 +74,8 @@ class App(ctk.CTk):
             level=logging.INFO,
             format='%(asctime)s - %(levelname)s - %(message)s',
             handlers=[
-                logging.FileHandler(log_file, encoding='utf-8')
+                logging.FileHandler(log_file, encoding='utf-8'),
+                logging.StreamHandler()
             ]
         )
 
@@ -152,7 +159,7 @@ class App(ctk.CTk):
         self.stats_label = ctk.CTkLabel(
             progress_frame, 
             text="Total: 0 | New: 0 | Errors: 0",
-            font=ctk.CTkFont(size=11)
+            font=ctk.CTkFont(size=14, weight="bold")
         )
         self.stats_label.pack(pady=5)
 
@@ -166,7 +173,7 @@ class App(ctk.CTk):
 
         # Add logging handler for GUI
         text_handler = TextHandler(self.log_text)
-        text_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+        text_handler.setFormatter(logging.Formatter('%(asctime)s - %(message)s'))
         logging.getLogger().addHandler(text_handler)
 
     def create_export_tab(self):
@@ -217,7 +224,6 @@ class App(ctk.CTk):
         self.btn_start.configure(state="disabled")
         self.btn_stop.configure(state="normal")
         self.btn_continue.configure(state="disabled")
-        self.progress_label.configure(text="Collection in progress...")
         
         # Get params
         limit_clients = self.parse_int(self.limit_clients_var.get())
@@ -239,7 +245,6 @@ class App(ctk.CTk):
         self.btn_start.configure(state="disabled")
         self.btn_stop.configure(state="normal")
         self.btn_continue.configure(state="disabled")
-        self.progress_label.configure(text="Resuming collection...")
 
         self.collection_thread = threading.Thread(
             target=self.run_collection, 
@@ -251,22 +256,33 @@ class App(ctk.CTk):
     def stop_collection(self):
         self.is_collecting = False
         self.btn_stop.configure(state="disabled")
-        self.progress_label.configure(text="Stopping...")
-        logging.info("Stop requested by user")
+        self.progress_label.configure(text="Stopping... please wait")
+        logging.info("STOP: User requested termination")
 
-    def progress_callback(self, current, total, stats=None):
+    def progress_callback(self, current, total, stats):
         """Callback to update UI progress"""
-        if total > 0:
-            val = current / total
-            self.after(0, lambda: self.progress_bar.set(val))
-            self.after(0, lambda: self.progress_label.configure(text=f"Processing {current}/{total}"))
-        
-        if stats:
-            self.after(0, lambda: self.stats_label.configure(
+        def update():
+            # Прогресс бар
+            if total > 0:
+                # Если обрабатываем только 1 клиента, прогресс бар должен быть плавным
+                # Но пока сделаем просто по клиентам
+                val = current / total
+                self.progress_bar.set(val)
+                self.progress_label.configure(text=f"Client {current} of {total}")
+            
+            # Статистика
+            self.stats_label.configure(
                 text=f"Total: {stats.get('total_phones', 0)} | New: {stats.get('new_phones', 0)} | Errors: {stats.get('errors', 0)}"
-            ))
+            )
+        
+        try:
+            self.after(0, update)
+        except Exception:
+            pass
 
     def run_collection(self, limit_clients, limit_projects, max_pages, resume):
+        api_client = None
+        db = None
         try:
             # Init API and DB
             api_client = DataMasterClient(self.api_url, self.api_token, self.timeout, self.max_retries)
@@ -279,7 +295,7 @@ class App(ctk.CTk):
             )
 
             # Передаем callback для прогресса
-            orchestrator.collect(
+            result = orchestrator.collect(
                 limit_clients=limit_clients,
                 limit_projects=limit_projects,
                 max_pages=max_pages,
@@ -288,27 +304,32 @@ class App(ctk.CTk):
                 stop_callback=lambda: not self.is_collecting
             )
 
-            self.after(0, lambda: self.collection_complete(True, "Collection completed"))
+            if result == "stopped":
+                msg = "🛑 Collection stopped and progress saved"
+            else:
+                msg = "✅ Collection successfully completed"
+            
+            self.after(0, lambda: self.collection_complete(True, msg))
 
         except Exception as e:
-            logging.error(f"Collection failed: {e}")
-            self.after(0, lambda: self.collection_complete(False, f"Error: {e}"))
+            logging.error(f"FATAL: {e}")
+            self.after(0, lambda: self.collection_complete(False, f"❌ Error: {e}"))
         finally:
-            api_client.close()
-            db.close()
+            if api_client: api_client.close()
+            if db: db.close()
             self.is_collecting = False
 
     def collection_complete(self, success, message):
         self.btn_start.configure(state="normal")
         self.btn_stop.configure(state="disabled")
         self.btn_continue.configure(state="normal")
-        
         self.progress_label.configure(text=message)
         if success:
             self.progress_bar.set(1.0)
         
     def export_data_phones(self):
         def do_export():
+            db = None
             try:
                 self.after(0, lambda: self.export_status.configure(text="Exporting..."))
                 db = DatabaseManager(self.db_path)
@@ -320,17 +341,18 @@ class App(ctk.CTk):
                 
                 self.after(0, lambda: self.export_status.configure(text=msg))
                 logging.info(msg)
-                db.close()
             except Exception as e:
                 err_msg = f"❌ Export failed: {e}"
                 self.after(0, lambda: self.export_status.configure(text=err_msg))
                 logging.error(err_msg)
+            finally:
+                if db: db.close()
 
         threading.Thread(target=do_export, daemon=True).start()
 
     def parse_int(self, value):
         try:
-            return int(value) if value.strip() else None
+            return int(value) if value and str(value).strip() else None
         except ValueError:
             return None
 
