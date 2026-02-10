@@ -418,15 +418,16 @@ class App(ctk.CTk):
         def update():
             # Прогресс бар
             if total > 0:
-                # Если обрабатываем только 1 клиента, прогресс бар должен быть плавным
-                # Но пока сделаем просто по клиентам
                 val = current / total
                 self.progress_bar.set(val)
                 self.progress_label.configure(text=f"Client {current} of {total}")
             
-            # Статистика
+            # Статистика с активными воркерами
+            active_workers = stats.get('active_workers', 0)
+            worker_info = f" | 🔄 Active: {active_workers}" if active_workers > 0 else ""
+            
             self.stats_label.configure(
-                text=f"Total: {stats.get('total_phones', 0)} | New: {stats.get('new_phones', 0)} | Errors: {stats.get('errors', 0)}"
+                text=f"Total: {stats.get('total_phones', 0)} | New: {stats.get('new_phones', 0)} | Errors: {stats.get('errors', 0)}{worker_info}"
             )
         
         try:

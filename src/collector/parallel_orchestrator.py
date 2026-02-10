@@ -49,6 +49,7 @@ class ParallelOrchestrator:
     ):
         self.api = api_client
         self.db = db
+        self.db_path = db.db_path
         self.rate_limit = rate_limit
         self.normalizer = PhoneNormalizer()
         self.state_manager = state_manager or StateManager()
@@ -59,6 +60,8 @@ class ParallelOrchestrator:
         # Thread-safe счётчики
         self.stats_lock = threading.Lock()
         self.processed_lock = threading.Lock()
+        self.active_workers = 0
+        self.active_workers_lock = threading.Lock()
         
         logger.info(f"ParallelOrchestrator initialized with {workers} workers")
     
@@ -166,8 +169,12 @@ class ParallelOrchestrator:
                         
                         # Callback для GUI
                         if progress_callback:
+                            # Добавляем информацию об активных воркерах в stats
+                            with self.active_workers_lock:
+                                stats['active_workers'] = self.active_workers
+                            
                             progress_callback(completed_count, total_clients, stats)
-                        
+
                     except Exception as e:
                         logger.error(f"Error processing client {client.id}: {e}")
                         with self.stats_lock:
@@ -208,14 +215,31 @@ class ParallelOrchestrator:
         stop_callback: Optional[Callable]
     ) -> dict:
         """Обработка одного клиента (выполняется в отдельном потоке)."""
+        from src.database.manager import DatabaseManager
+        
         client_stats = {'phones': 0, 'new_phones': 0, 'projects': 0}
+        
+        # Увеличиваем счётчик активных воркеров
+        with self.active_workers_lock:
+            self.active_workers += 1
+            current_active = self.active_workers
+        
+        logger.info(f"[Worker-{threading.current_thread().name}] Starting client: {client.username} (Active workers: {current_active})")
+        
+        # Создаём отдельное подключение к БД для этого потока
+        thread_db = DatabaseManager(self.db_path)
+        thread_db.connect()
+        
+        # Создаём отдельное подключение к БД для этого потока
+        thread_db = DatabaseManager(self.db.db_path)
+        thread_db.connect()
         
         try:
             logger.info(f"[Worker-{threading.current_thread().name}] Processing client: {client.username}")
             
             # Вставка клиента
             self.rate_limiter.wait()
-            self.db.insert_client(client.id, client.username)
+            thread_db.insert_client(client.id, client.username)
             
             # Получение проектов
             self.rate_limiter.wait()
@@ -230,7 +254,7 @@ class ParallelOrchestrator:
                     break
                 
                 self.rate_limiter.wait()
-                self.db.insert_project(project.id, project.name, client.id)
+                thread_db.insert_project(project.id, project.name, client.id)
                 client_stats['projects'] += 1
                 
                 # Пагинация номеров
@@ -253,15 +277,15 @@ class ParallelOrchestrator:
                         normalized, is_valid = self.normalizer.normalize(phone_data.phone)
                         
                         if is_valid:
-                            existing = self.db.get_phone_by_number(normalized)
+                            existing = thread_db.get_phone_by_number(normalized)
                             
                             if not existing:
-                                phone_id = self.db.insert_phone(normalized, phone_data.phone, run_id)
+                                phone_id = thread_db.insert_phone(normalized, phone_data.phone, run_id)
                                 client_stats['new_phones'] += 1
                             else:
                                 phone_id = existing['id']
                             
-                            self.db.insert_project_phone(project.id, phone_id, run_id, phone_data.created_at)
+                            thread_db.insert_project_phone(project.id, phone_id, run_id, phone_data.created_at)
                             client_stats['phones'] += 1
                     
                     page += 1
@@ -271,6 +295,14 @@ class ParallelOrchestrator:
         except Exception as e:
             logger.error(f"Error in client {client.id}: {e}")
             raise
+        finally:
+            # Закрываем соединение после обработки клиента
+            thread_db.close()
+            # Уменьшаем счётчик активных воркеров
+            with self.active_workers_lock:
+                self.active_workers -= 1
+                logger.info(f"[Worker-{threading.current_thread().name}] Finished. Active workers: {self.active_workers}")
+
     
     def save_state(self, run_id: int, total_clients: int, processed_client_ids: set, stats: dict):
         """Thread-safe сохранение состояния."""

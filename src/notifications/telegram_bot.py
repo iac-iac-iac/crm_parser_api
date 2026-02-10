@@ -14,6 +14,8 @@ class TelegramNotifier:
         self.chat_id = chat_id
         self.enabled = enabled
         self.base_url = f"https://api.telegram.org/bot{token}"
+        self.last_error_time = 0  # ← Добавь
+        self.error_cooldown = 10  # ← Минимум 10 сек между ошибками
         
         if not self.enabled:
             logger.info("Telegram notifications disabled")
@@ -60,7 +62,17 @@ class TelegramNotifier:
         return self.send_message(text)
     
     def notify_error(self, run_id: int, error_msg: str, client_id: Optional[int] = None) -> bool:
-        """Уведомление об ошибке."""
+        """Уведомление об ошибке с защитой от спама."""
+        import time
+        
+        # Проверка cooldown
+        current_time = time.time()
+        if current_time - self.last_error_time < self.error_cooldown:
+            logger.debug("Skipping error notification due to cooldown")
+            return False
+        
+        self.last_error_time = current_time
+        
         client_info = f" (Клиент #{client_id})" if client_id else ""
         text = (
             f"❌ <b>Ошибка #{run_id}</b>{client_info}\n\n"
