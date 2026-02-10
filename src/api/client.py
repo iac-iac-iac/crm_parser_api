@@ -37,8 +37,31 @@ class DataMasterClient:
         self.token = token
         self.timeout = timeout
         self.max_retries = max_retries
+        
+        # Настройка session с connection pooling и retry
         self.session = requests.Session()
         self.session.headers.update({'Content-Type': 'application/json'})
+        
+        # HTTPAdapter с connection pool и retry стратегией
+        from requests.adapters import HTTPAdapter
+        from urllib3.util.retry import Retry
+        
+        retry_strategy = Retry(
+            total=max_retries,
+            backoff_factor=1,  # 1, 2, 4 секунды между попытками
+            status_forcelist=[429, 500, 502, 503, 504],  # Повторять при этих статусах
+            allowed_methods=["POST", "GET"]  # Для каких методов
+        )
+        
+        adapter = HTTPAdapter(
+            pool_connections=10,    # Количество connection pools
+            pool_maxsize=20,        # Максимальный размер каждого pool
+            max_retries=retry_strategy
+        )
+        
+        self.session.mount('http://', adapter)
+        self.session.mount('https://', adapter)
+
 
     @retry(max_attempts=3, delay=2.0, backoff=2.0, exceptions=(requests.exceptions.RequestException,))
     def _make_request(self, command: str, **params) -> Dict:

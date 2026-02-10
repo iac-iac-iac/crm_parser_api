@@ -202,3 +202,144 @@ class DatabaseManager:
             'avg_speed_phones_per_minute': round(avg_speed, 2),
             'runs_analyzed': len(rows)
         }
+    def insert_phones_batch(self, phones_data: list) -> dict:
+        """
+        Массовая вставка номеров.
+        
+        Args:
+            phones_data: [
+                {'phone': '+79991234567', 'original': '8 (999) 123-45-67', 'run_id': 1},
+                ...
+            ]
+        
+        Returns:
+            {'inserted': 50, 'duplicates': 10, 'phone_ids': {...}}
+        """
+        if not phones_data:
+            return {'inserted': 0, 'duplicates': 0, 'phone_ids': {}}
+        
+        cursor = self.connection.cursor()
+        
+        # Подготовка данных для вставки
+        values_to_insert = [
+            (p['phone'], p['original'], p['run_id']) 
+            for p in phones_data
+        ]
+        
+        # Вставка с игнорированием дубликатов
+        cursor.executemany("""
+            INSERT OR IGNORE INTO phones (phone, original_format, first_run_id)
+            VALUES (?, ?, ?)
+        """, values_to_insert)
+        
+        inserted_count = cursor.rowcount
+        
+        # Получаем ID всех номеров (включая существующие)
+        phone_ids = {}
+        for phone_data in phones_data:
+            row = cursor.execute(
+                "SELECT id FROM phones WHERE phone = ?",
+                (phone_data['phone'],)
+            ).fetchone()
+            if row:
+                phone_ids[phone_data['phone']] = row['id']
+        
+        self.connection.commit()
+        
+        return {
+            'inserted': inserted_count,
+            'duplicates': len(phones_data) - inserted_count,
+            'phone_ids': phone_ids
+        }
+
+    def insert_project_phones_batch(self, links: list):
+        """
+        Массовая вставка связей проект-номер.
+        
+        Args:
+            links: [
+                (project_id, phone_id, run_id, created_at_api),
+                ...
+            ]
+        """
+        if not links:
+            return
+        
+        cursor = self.connection.cursor()
+        
+        cursor.executemany("""
+            INSERT OR IGNORE INTO project_phones 
+            (project_id, phone_id, run_id, created_at_api)
+            VALUES (?, ?, ?, ?)
+        """, links)
+        
+        self.connection.commit()
+    def export_phone_base(self, export_path: str):
+        """
+        Создание SQL базы только с уникальными номерами.
+        
+        Args:
+            export_path: Путь для экспорта (например: 'data/exports/phones_only.db')
+        """
+        import shutil
+        
+        # Создаём директорию если не существует
+        os.makedirs(os.path.dirname(export_path), exist_ok=True)
+        
+        # Создаём новую БД для экспорта
+        export_conn = sqlite3.connect(export_path)
+        export_conn.row_factory = sqlite3.Row
+        export_cursor = export_conn.cursor()
+        
+        try:
+            # Создаём упрощённую таблицу phones
+            export_cursor.execute("""
+                CREATE TABLE IF NOT EXISTS phones (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    phone TEXT NOT NULL UNIQUE,
+                    original_format TEXT,
+                    first_seen_at TIMESTAMP,
+                    first_run_id INTEGER
+                )
+            """)
+            
+            # Создаём индекс
+            export_cursor.execute("""
+                CREATE INDEX IF NOT EXISTS idx_phones_phone ON phones(phone)
+            """)
+            
+            # Копируем данные из основной БД
+            phones_data = self.connection.execute("""
+                SELECT phone, original_format, first_seen_at, first_run_id
+                FROM phones
+                ORDER BY id
+            """).fetchall()
+            
+            # Вставляем в новую БД
+            export_cursor.executemany("""
+                INSERT INTO phones (phone, original_format, first_seen_at, first_run_id)
+                VALUES (?, ?, ?, ?)
+            """, [(row['phone'], row['original_format'], row['first_seen_at'], row['first_run_id']) 
+                for row in phones_data])
+            
+            export_conn.commit()
+            
+            # VACUUM для оптимизации размера
+            export_cursor.execute("VACUUM")
+            
+            return {
+                'success': True,
+                'path': export_path,
+                'phones_count': len(phones_data)
+            }
+            
+        except Exception as e:
+            logger.error(f"Error exporting phone base: {e}")
+            return {
+                'success': False,
+                'error': str(e)
+            }
+        finally:
+            export_conn.close()
+
+

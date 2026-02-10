@@ -49,3 +49,13 @@ CREATE TABLE IF NOT EXISTS project_phones (
     FOREIGN KEY (phone_id) REFERENCES phones(id),
     FOREIGN KEY (run_id) REFERENCES runs(id)
 );
+
+-- Additional indexes for performance
+CREATE INDEX IF NOT EXISTS idx_project_phones_phone ON project_phones(phone_id);
+CREATE INDEX IF NOT EXISTS idx_project_phones_project ON project_phones(project_id);
+CREATE INDEX IF NOT EXISTS idx_project_phones_run ON project_phones(run_id);
+CREATE INDEX IF NOT EXISTS idx_runs_status ON runs(status);
+CREATE INDEX IF NOT EXISTS idx_runs_started ON runs(started_at);
+CREATE INDEX IF NOT EXISTS idx_projects_client ON projects(client_id);
+CREATE INDEX IF NOT EXISTS idx_phones_run ON phones(first_run_id);
+

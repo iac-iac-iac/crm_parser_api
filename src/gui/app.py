@@ -20,19 +20,34 @@ ctk.set_default_color_theme("blue")
 
 class TextHandler(logging.Handler):
     """Handler для вывода логов в текстовый виджет"""
+    
     def __init__(self, text_widget):
         super().__init__()
         self.text_widget = text_widget
-
+    
     def emit(self, record):
         msg = self.format(record)
+        
         def append():
             try:
                 self.text_widget.configure(state='normal')
-                self.text_widget.insert('end', msg + '')
+                
+                # Принудительно добавляем перенос строки
+                if not msg.endswith('\n'):
+                    full_msg = msg + '\n'
+                else:
+                    full_msg = msg
+                
+                # Вставляем текст
+                self.text_widget.insert('end', full_msg)
+                
+                # Автопрокрутка вниз
                 self.text_widget.see('end')
+                
+                # Блокируем редактирование
                 self.text_widget.configure(state='disabled')
-            except Exception:
+            except Exception as e:
+                # Игнорируем ошибки (например, если виджет уже уничтожен)
                 pass
         
         # Используем after для потокобезопасности
@@ -40,6 +55,7 @@ class TextHandler(logging.Handler):
             self.text_widget.after(0, append)
         except Exception:
             pass
+
 
 class App(ctk.CTk):
     def __init__(self):
@@ -496,30 +512,95 @@ class App(ctk.CTk):
         logs_frame.pack(pady=10, padx=20, fill="both", expand=True)
 
         ctk.CTkLabel(logs_frame, text="Logs:", font=ctk.CTkFont(size=12, weight="bold")).pack(anchor="w", padx=5, pady=5)
-        self.log_text = ctk.CTkTextbox(logs_frame, height=200, state="disabled")
+        self.log_text = ctk.CTkTextbox(
+            logs_frame, 
+            height=200, 
+            state="disabled",
+            wrap="none",  # ← ВАЖНО: "none" для горизонтального скролла
+            font=("Courier New", 15)  # Моноширинный шрифт
+        )
         self.log_text.pack(fill="both", expand=True, padx=5, pady=5)
+
+        # Настройка тега для моноширинного шрифта (опционально)
+        # self.log_text.tag_config("monospace", font=("Courier New", 10))
+
 
         # Add logging handler for GUI
         text_handler = TextHandler(self.log_text)
-        text_handler.setFormatter(logging.Formatter('%(asctime)s - %(message)s'))
-        logging.getLogger().addHandler(text_handler)
+
+        # Более читаемый формат с переносом
+        formatter = logging.Formatter(
+            fmt='%(asctime)s - %(levelname)s - %(message)s',
+            datefmt='%H:%M:%S'  # Только время (без даты)
+        )
+        text_handler.setFormatter(formatter)
+
+        # Добавляем handler только если его ещё нет
+        logger = logging.getLogger()
+        if not any(isinstance(h, TextHandler) for h in logger.handlers):
+            logger.addHandler(text_handler)
+
 
     def create_export_tab(self):
         export_frame = ctk.CTkFrame(self.tab_export)
         export_frame.pack(pady=20, padx=20, fill="both", expand=True)
-
+        
         ctk.CTkLabel(
-            export_frame, text="Export Data to CSV", 
+            export_frame, text="Export Data", 
             font=ctk.CTkFont(size=18, weight="bold")
         ).pack(pady=20)
-
-        # Buttons
-        ctk.CTkButton(
-            export_frame, text="📂 Export All Phones", 
-            command=self.export_data_phones, width=300, height=40
+        
+        # CSV Export Section
+        csv_section = ctk.CTkFrame(export_frame)
+        csv_section.pack(pady=10, padx=20, fill="x")
+        
+        ctk.CTkLabel(
+            csv_section, 
+            text="📄 CSV Export",
+            font=ctk.CTkFont(size=14, weight="bold")
         ).pack(pady=10)
-
-        self.export_status = ctk.CTkLabel(export_frame, text="", font=ctk.CTkFont(size=11))
+        
+        ctk.CTkButton(
+            csv_section, 
+            text="📂 Export All Phones (CSV)", 
+            command=self.export_data_phones, 
+            width=300, 
+            height=40
+        ).pack(pady=5)
+        
+        # Database Export Section
+        db_section = ctk.CTkFrame(export_frame)
+        db_section.pack(pady=10, padx=20, fill="x")
+        
+        ctk.CTkLabel(
+            db_section, 
+            text="💾 Database Export",
+            font=ctk.CTkFont(size=14, weight="bold")
+        ).pack(pady=10)
+        
+        ctk.CTkButton(
+            db_section, 
+            text="📊 Export Phone Base (SQLite)", 
+            command=self.export_phone_base,
+            width=300, 
+            height=40,
+            fg_color="blue",
+            hover_color="darkblue"
+        ).pack(pady=5)
+        
+        ctk.CTkLabel(
+            db_section,
+            text="ℹ️ Creates a new .db file with only unique phone numbers",
+            font=ctk.CTkFont(size=10),
+            text_color="gray"
+        ).pack(pady=5)
+        
+        # Status label
+        self.export_status = ctk.CTkLabel(
+            export_frame, 
+            text="", 
+            font=ctk.CTkFont(size=11)
+        )
         self.export_status.pack(pady=20)
 
     def create_settings_tab(self):
@@ -828,6 +909,44 @@ class App(ctk.CTk):
             finally:
                 if db: db.close()
 
+        threading.Thread(target=do_export, daemon=True).start()
+
+    def export_phone_base(self):
+        """Экспорт SQL базы только с уникальными номерами."""
+        def do_export():
+            db = None
+            try:
+                self.after(0, lambda: self.export_status.configure(text="Exporting phone base..."))
+                
+                db = DatabaseManager(self.db_path)
+                db.connect()
+                
+                # Генерируем имя файла с датой
+                from datetime import datetime
+                timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                export_filename = f"phones_base_{timestamp}.db"
+                export_path = os.path.join("data", "exports", export_filename)
+                
+                # Экспортируем
+                result = db.export_phone_base(export_path)
+                
+                if result['success']:
+                    msg = f"✅ Phone base exported: {export_filename}\n📊 Total phones: {result['phones_count']:,}"
+                    logging.info(f"Phone base exported to {export_path}")
+                else:
+                    msg = f"❌ Export failed: {result['error']}"
+                    logging.error(msg)
+                
+                self.after(0, lambda: self.export_status.configure(text=msg))
+                
+            except Exception as e:
+                err_msg = f"❌ Export failed: {e}"
+                self.after(0, lambda: self.export_status.configure(text=err_msg))
+                logging.error(err_msg)
+            finally:
+                if db:
+                    db.close()
+        
         threading.Thread(target=do_export, daemon=True).start()
 
     def save_settings(self):

@@ -272,23 +272,45 @@ class ParallelOrchestrator:
                     if not phones:
                         break
                     
-                    # Обработка номеров
+                    # Обработка номеров с batch insert
+                    phones_batch = []
                     for phone_data in phones:
                         normalized, is_valid = self.normalizer.normalize(phone_data.phone)
                         
                         if is_valid:
-                            existing = thread_db.get_phone_by_number(normalized)
-                            
-                            if not existing:
-                                phone_id = thread_db.insert_phone(normalized, phone_data.phone, run_id)
-                                client_stats['new_phones'] += 1
-                            else:
-                                phone_id = existing['id']
-                            
-                            thread_db.insert_project_phone(project.id, phone_id, run_id, phone_data.created_at)
-                            client_stats['phones'] += 1
-                    
+                            phones_batch.append({
+                                'phone': normalized,
+                                'original': phone_data.phone,
+                                'run_id': run_id,
+                                'created_at': phone_data.created_at,
+                                'project_id': project.id
+                            })
+
+                    # Вставляем всю пачку номеров сразу
+                    if phones_batch:
+                        # Вставка номеров
+                        result = thread_db.insert_phones_batch(phones_batch)
+                        client_stats['new_phones'] += result['inserted']
+                        client_stats['phones'] += len(phones_batch)
+                        
+                        # Подготовка связей проект-номер
+                        project_phone_links = [
+                            (
+                                p['project_id'],
+                                result['phone_ids'].get(p['phone']),
+                                run_id,
+                                p['created_at']
+                            )
+                            for p in phones_batch
+                            if result['phone_ids'].get(p['phone'])
+                        ]
+                        
+                        # Вставка связей пачкой
+                        if project_phone_links:
+                            thread_db.insert_project_phones_batch(project_phone_links)
+
                     page += 1
+
             
             return client_stats
             
