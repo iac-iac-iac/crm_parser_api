@@ -101,13 +101,302 @@ class App(ctk.CTk):
         self.tabview = ctk.CTkTabview(self, width=900, height=600)
         self.tabview.pack(pady=10, padx=20, fill="both", expand=True)
 
+        self.tab_dashboard = self.tabview.add("Dashboard")
         self.tab_collection = self.tabview.add("Collection")
         self.tab_export = self.tabview.add("Export")
         self.tab_settings = self.tabview.add("Settings")
 
+        self.create_dashboard_tab()
         self.create_collection_tab()
         self.create_export_tab()
         self.create_settings_tab()
+    
+    def create_dashboard_tab(self):
+        """Создание вкладки Dashboard."""
+        # Main container
+        dashboard_frame = ctk.CTkScrollableFrame(self.tab_dashboard, width=850, height=550)
+        dashboard_frame.pack(pady=10, padx=10, fill="both", expand=True)
+        
+        # Header
+        header = ctk.CTkLabel(
+            dashboard_frame,
+            text="📊 Collection Dashboard",
+            font=ctk.CTkFont(size=20, weight="bold")
+        )
+        header.pack(pady=10)
+        
+        # === ОБЩАЯ СТАТИСТИКА ===
+        stats_section = ctk.CTkFrame(dashboard_frame)
+        stats_section.pack(pady=10, padx=10, fill="x")
+        
+        ctk.CTkLabel(
+            stats_section,
+            text="Overall Statistics",
+            font=ctk.CTkFont(size=16, weight="bold")
+        ).pack(pady=5)
+        
+        # Контейнер для метрик (4 колонки)
+        metrics_frame = ctk.CTkFrame(stats_section)
+        metrics_frame.pack(pady=10, padx=10, fill="x")
+        
+        # Метрики
+        self.metric_clients = self._create_metric_card(metrics_frame, "👥 Clients", "0", 0)
+        self.metric_projects = self._create_metric_card(metrics_frame, "📁 Projects", "0", 1)
+        self.metric_phones = self._create_metric_card(metrics_frame, "📞 Total Phones", "0", 2)
+        self.metric_unique = self._create_metric_card(metrics_frame, "✨ Unique", "0", 3)
+        
+        # === ПОСЛЕДНИЙ ЗАПУСК ===
+        last_run_section = ctk.CTkFrame(dashboard_frame)
+        last_run_section.pack(pady=10, padx=10, fill="x")
+        
+        ctk.CTkLabel(
+            last_run_section,
+            text="Last Run",
+            font=ctk.CTkFont(size=16, weight="bold")
+        ).pack(pady=5)
+        
+        self.last_run_info = ctk.CTkLabel(
+            last_run_section,
+            text="No runs yet",
+            font=ctk.CTkFont(size=12),
+            justify="left"
+        )
+        self.last_run_info.pack(pady=10, padx=20, anchor="w")
+        
+        # === ПРОИЗВОДИТЕЛЬНОСТЬ ===
+        performance_section = ctk.CTkFrame(dashboard_frame)
+        performance_section.pack(pady=10, padx=10, fill="x")
+        
+        ctk.CTkLabel(
+            performance_section,
+            text="Performance Stats (Last 5 Runs)",
+            font=ctk.CTkFont(size=16, weight="bold")
+        ).pack(pady=5)
+        
+        self.performance_info = ctk.CTkLabel(
+            performance_section,
+            text="No completed runs yet",
+            font=ctk.CTkFont(size=12),
+            justify="left"
+        )
+        self.performance_info.pack(pady=10, padx=20, anchor="w")
+
+        # === ГРАФИК ДИНАМИКИ ===
+        graph_section = ctk.CTkFrame(dashboard_frame)
+        graph_section.pack(pady=10, padx=10, fill="x")
+
+        ctk.CTkLabel(
+            graph_section,
+            text="Collection Trend (Last 10 Runs)",
+            font=ctk.CTkFont(size=16, weight="bold")
+        ).pack(pady=5)
+
+        # Canvas для графика
+        self.graph_canvas = ctk.CTkCanvas(
+            graph_section,
+            width=800,
+            height=200,
+            bg="#2b2b2b",
+            highlightthickness=0
+        )
+        self.graph_canvas.pack(pady=10, padx=10)
+
+        # === ИСТОРИЯ ЗАПУСКОВ (оставь как было) ===
+        history_section = ctk.CTkFrame(dashboard_frame)
+                
+        # === ИСТОРИЯ ЗАПУСКОВ ===
+        history_section = ctk.CTkFrame(dashboard_frame)
+        history_section.pack(pady=10, padx=10, fill="both", expand=True)
+        
+        ctk.CTkLabel(
+            history_section,
+            text="Recent Runs History",
+            font=ctk.CTkFont(size=16, weight="bold")
+        ).pack(pady=5)
+        
+        # Таблица истории
+        self.history_text = ctk.CTkTextbox(history_section, height=150, state="disabled")
+        self.history_text.pack(pady=10, padx=10, fill="both", expand=True)
+        
+        # Кнопка обновления
+        refresh_btn = ctk.CTkButton(
+            dashboard_frame,
+            text="🔄 Refresh Dashboard",
+            command=self.refresh_dashboard,
+            fg_color="blue",
+            hover_color="darkblue",
+            width=200
+        )
+        refresh_btn.pack(pady=20)
+        
+        # Автозагрузка при открытии
+        self.refresh_dashboard()
+    
+    def _create_metric_card(self, parent, label: str, value: str, column: int):
+        """Создание карточки метрики."""
+        card = ctk.CTkFrame(parent, width=180, height=80)
+        card.grid(row=0, column=column, padx=10, pady=10)
+        
+        ctk.CTkLabel(
+            card,
+            text=label,
+            font=ctk.CTkFont(size=11),
+            text_color="gray"
+        ).pack(pady=(10, 0))
+        
+        value_label = ctk.CTkLabel(
+            card,
+            text=value,
+            font=ctk.CTkFont(size=24, weight="bold")
+        )
+        value_label.pack(pady=(0, 10))
+        
+        return value_label
+
+    def refresh_dashboard(self):
+        """Обновление данных Dashboard."""
+        def do_refresh():
+            db = None
+            try:
+                logging.info("Starting dashboard refresh...")
+                db = DatabaseManager(self.db_path)
+                logging.info(f"DatabaseManager created, db_path={self.db_path}")
+
+                db.connect()
+                logging.info("Database connected successfully")
+                
+                # Общая статистика
+                logging.info("Fetching total stats...")
+                stats = db.get_total_stats()
+                logging.info(f"Total stats: {stats}")
+                
+                self.after(0, lambda: self.metric_clients.configure(text=f"{stats['total_clients']:,}"))
+                self.after(0, lambda: self.metric_projects.configure(text=f"{stats['total_projects']:,}"))
+                self.after(0, lambda: self.metric_phones.configure(text=f"{stats['total_phones']:,}"))
+                self.after(0, lambda: self.metric_unique.configure(text=f"{stats['total_unique_phones']:,}"))
+                
+                # Последний запуск
+                if stats['last_run']:
+                    lr = stats['last_run']
+                    duration = "N/A"
+                    if lr.get('completed_at'):  # ← Используй .get() для безопасности
+                        from datetime import datetime
+                        try:
+                            start = datetime.fromisoformat(lr['started_at'])
+                            end = datetime.fromisoformat(lr['completed_at'])
+                            duration = f"{(end - start).total_seconds() / 60:.1f} min"
+                        except Exception as e:
+                            logging.error(f"Error calculating duration: {e}")
+                            duration = "N/A"
+                    
+                    last_run_text = (
+                        f"Run #{lr['id']} | Status: {lr['status']}\n"
+                        f"Start: {lr['started_at']}\n"
+                        f"Duration: {duration}\n"
+                        f"Phones: {lr['total_phones']} (New: {lr['new_phones']}) | Errors: {lr.get('errors_count', 0)}"
+                    )
+                else:
+                    last_run_text = "No runs yet"
+
+                self.after(0, lambda: self.last_run_info.configure(text=last_run_text))
+                
+                # Производительность
+                perf = db.get_collection_speed_stats()
+                if perf['runs_analyzed'] > 0:
+                    perf_text = (
+                        f"Avg Duration: {perf['avg_duration_minutes']:.1f} min\n"
+                        f"Avg Phones/Run: {perf['avg_phones_per_run']:,}\n"
+                        f"Speed: {perf['avg_speed_phones_per_minute']:.2f} phones/min\n"
+                        f"(Based on {perf['runs_analyzed']} completed runs)"
+                    )
+                else:
+                    perf_text = "No completed runs yet"
+                
+                self.after(0, lambda: self.performance_info.configure(text=perf_text))
+                
+                # История запусков
+                history = db.get_runs_history(10)
+                if history:
+                    self.after(0, lambda: self.draw_collection_graph(history))
+                history_lines = ["ID | Start Time              | Status      | Phones | New | Errors\n"]
+                history_lines.append("-" * 70 + "\n")
+                
+                for run in history:
+                    line = (
+                        f"{run['id']:2} | {run['started_at'][:19]} | "
+                        f"{run['status']:11} | {run['total_phones']:6} | {run['new_phones']:3} | {run['errors_count']:2}\n"
+                    )
+                    history_lines.append(line)
+                
+                history_text = "".join(history_lines) if history else "No runs yet\n"
+                
+                def update_history():
+                    self.history_text.configure(state="normal")
+                    self.history_text.delete("1.0", "end")
+                    self.history_text.insert("1.0", history_text)
+                    self.history_text.configure(state="disabled")
+                
+                self.after(0, update_history)
+                
+                logging.info("Dashboard refreshed")
+                
+            except Exception as e:
+                logging.error(f"Failed to refresh dashboard: {e}")
+            finally:
+                if db:
+                    db.close()
+        
+        # Запускаем в отдельном потоке
+        import threading
+        threading.Thread(target=do_refresh, daemon=True).start()
+    
+    def draw_collection_graph(self, runs_data: list):
+        """Отрисовка графика динамики сбора."""
+        if not runs_data or len(runs_data) < 2:
+            return
+        
+        canvas = self.graph_canvas
+        canvas.delete("all")
+        
+        width = 800
+        height = 200
+        padding = 40
+        
+        # Получаем данные
+        phones_data = [run['total_phones'] for run in reversed(runs_data)]  # От старых к новым
+        max_phones = max(phones_data) if phones_data else 1
+        
+        # Масштабирование
+        x_step = (width - 2 * padding) / (len(phones_data) - 1) if len(phones_data) > 1 else 0
+        y_scale = (height - 2 * padding) / max_phones if max_phones > 0 else 1
+        
+        # Оси
+        canvas.create_line(padding, height - padding, width - padding, height - padding, fill="gray", width=2)  # X
+        canvas.create_line(padding, padding, padding, height - padding, fill="gray", width=2)  # Y
+        
+        # Линия графика
+        points = []
+        for i, phones in enumerate(phones_data):
+            x = padding + i * x_step
+            y = height - padding - (phones * y_scale)
+            points.extend([x, y])
+            
+            # Точки
+            canvas.create_oval(x-4, y-4, x+4, y+4, fill="#1f6aa5", outline="white", width=2)
+        
+        # Соединяющая линия
+        if len(points) >= 4:
+            canvas.create_line(points, fill="#1f6aa5", width=3, smooth=True)
+        
+        # Подписи осей
+        canvas.create_text(width // 2, height - 10, text="Runs", fill="white", font=("Arial", 10))
+        canvas.create_text(15, height // 2, text="Phones", fill="white", font=("Arial", 10), angle=90)
+        
+        # Значения на оси Y
+        for i in range(5):
+            y_val = (max_phones / 4) * i
+            y_pos = height - padding - (y_val * y_scale)
+            canvas.create_text(padding - 20, y_pos, text=f"{int(y_val)}", fill="gray", font=("Arial", 8))
 
     def create_collection_tab(self):
         # Settings Frame (Params)
@@ -427,7 +716,7 @@ class App(ctk.CTk):
             worker_info = f" | 🔄 Active: {active_workers}" if active_workers > 0 else ""
             
             self.stats_label.configure(
-                text=f"Total: {stats.get('total_phones', 0)} | New: {stats.get('new_phones', 0)} | Errors: {stats.get('errors', 0)}{worker_info}"
+                text=f"Total: {stats.get('total_phones', 0)} | New: {stats.get('new_phones', 0)} | Errors: {stats.get('errors_count', 0)}{worker_info}"
             )
         
         try:
@@ -515,6 +804,9 @@ class App(ctk.CTk):
         if success:
             self.progress_bar.set(1.0)
         
+        if hasattr(self, 'refresh_dashboard'):
+            self.refresh_dashboard()
+            
     def export_data_phones(self):
         def do_export():
             db = None
@@ -564,6 +856,7 @@ class App(ctk.CTk):
         except Exception as e:
             logging.error(f"Failed to save settings: {e}")
             self.show_message("Error", f"Failed to save: {e}", "error")
+    
     def save_parallel_settings(self):
         """Сохранение настроек параллелизации."""
         try:
@@ -624,7 +917,6 @@ class App(ctk.CTk):
         # Записываем обратно
         with open(env_path, 'w', encoding='utf-8') as f:
             f.writelines(lines)
-
 
     def update_env_file(self):
         """Обновление .env файла с новыми настройками."""
